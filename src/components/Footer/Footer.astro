@@ -1,0 +1,66 @@
+---
+
+---
+
+<footer>
+  <p id="footer-credit">This site is being rebuilt with love by Maggie Bittarelli<br/>Under construction: Autumn 2024</p>
+  <div id="footer-easter-egg-wrapper">
+    <a
+      href="https://www.youtube.com/watch?v=r3xG01Fe5D8&t=1730s"
+      target="_blank"
+      rel="noreferrer noopener"
+      aria-label="A video of Boycott Brass Band's set at the 2017 HONK! Festival. Maggie plays the trumpet alongside her bandmates."
+    >
+      <img src="/uploads/askingest-pigeon.webp" alt="A cartoon pigeon rants boasts about how demanding he can be." />
+    </a>
+  </div>
+</footer>
+
+<style>
+  footer {
+    background: #101521;
+    text-align: center;
+    padding: 2rem 1rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
+  #footer-credit {
+    color: #f5f8e5;
+    font-size: 1.25rem;
+    line-height: 3rem;
+  }
+
+  #footer-easter-egg-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+  }
+  #footer-easter-egg-wrapper img {
+    height: 130px;
+    width: 130px;
+    border-radius: 1.25rem;
+  }
+
+  @media (max-width: 769px) {
+    footer {
+      position: unset;
+      flex-direction: column;
+    }
+    #footer-credit {
+      max-width: 30ch;
+      line-height: 2rem;
+      align-self: center;
+    }
+
+    #footer-easter-egg-wrapper {
+      position: unset;
+      justify-content: center;
+    }
+  }
+</style>

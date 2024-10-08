@@ -1,0 +1,80 @@
+{
+  "projects": [
+    {
+      "name": "Neutrogena Skin360",
+      "type": "webapp",
+      "linkLive": "https://skin360.neutrogena.com/",
+      "imageSrc": "/uploads/Skin360-screenshot.webp",
+      "imageAlt": "A collage of screenshots taken from the Skin360 webapp.",
+      "subheading": "Skin360 uses facial scan and survey data to recommend skincare routines and products to users. The core functionality of this webapp is in fact implemented in more than several different web contexts. The team I was part of built and maintains sibling instances for NTG US, NTG CA (French Canadian and English), NTG Brazil (Portuguese and English), NTG India, Walmart, CVS, and Neostrata.",
+      "description": [
+        "Worked across all screens of the webapp, implementing logic and crafting custom components to design specs",
+        "Built and maintained backend routes to collect user data and select skincare routines and products based on survey and face scan input",
+        "Built and maintained data pipelines to pull product data from appropriate APIs (Neutrogena and partners)", 
+        "Contributed to various microservices used to maintain the integrity and security of the app"
+      ],
+      "tags": ["NextJS", "JavaScript", "NodeJS", "Python", "MySQL", "Jest", "pytest", "Netlify", "REST APIs", "Custom Microservices"]
+    },
+    {
+      "name": "Beyond Barriers",
+      "type": "website",
+      "linkLive": "https://beyondbarriers.concernusa.org/",
+      "imageSrc": "/uploads/BeyondBarriers-screenshot.webp",
+      "imageAlt": "A collage of screenshots taken from the Beyond Barriers site.",
+      "subheading": "This site houses findings and resources from Concern Worldwide's Beyond Barriers project, which explored the barriers that limit the role of local actors in humanitarian response. I was one of just two main contributors to this site, and particularly enjoyed building the Library and world map modal functionality.",
+      "description": [],
+      "tags": ["React", "AstroJS", "Decap CMS", "Netlify"]
+    },
+    {
+      "name": "Concern USA",
+      "type": "website",
+      "linkLive": "https://www.concernusa.org",
+      "imageSrc": "/uploads/ConcernUSA-screenshot.webp",
+      "imageAlt": "A collage of screenshots taken from the Concern USA site.",
+      "subheading": "Concern is an international non-profit organization that seeks to end extreme poverty around the world. As part of a small dev team, I worked primarily on v1 of this large, content-rich site, building custom components and scaffolding many pages. To accommodate Concern's unique need for the flexibility to create pages and post content independently, much work was done to ensure that approximately 80 custom components we crafted were built with many conditional style options, and these were made available to 'drop' into new and existing pages via the CMS that Concern uses to add site updates.",
+      "description": [],
+      "tags": ["AstroJS", "Preact", "Nanostores", "Decap CMS", "Storybook", "Jest", "Algolia", "Netlify"]
+    },
+    {
+      "name": "MIT AgeLab",
+      "type": "website",
+      "linkLive": "https://agelab.mit.edu/",
+      "imageSrc": "/uploads/MITAgeLab-screenshot.webp",
+      "imageAlt": "A collage of screenshots taken from the MIT AgeLab site.",
+      "subheading": "I worked on MIT AgeLab's web-presence refresh, helping to build a modernized, organized, responsive site that is intuitive to visitors and assists them in meaningfully engaging with content. I particularly enjoyed building Netlify Functions for the site's 'contact' and 'subscribe'-related routes, as well as creating various instances of the 'card links' that are found across the site. The design of the site is clean with pops of color, and it was delightful to watch it come to life.",
+      "description": [],
+
+      "tags": ["Eleventy", "RestAPI", "Netlify"]
+    },
+    {
+      "name": "Grafton Studio",
+      "type": "website",
+      "linkLive": "https://www.graftonstudio.com",
+      "imageSrc": "/uploads/GS-screenshot.webp",
+      "imageAlt": "A collage of screenshots taken from the Grafton Studio site.",
+      "subheading": "Over the duration of my time with Grafton Studio, I worked on two versions of this site. The first was an exercise in lean performance and semantic HTML, architected almost solely using HTML and CSS, with extremely minimal JavaScript (to handle identifying active links). I was one of just two main contributors to the currently deployed site, released at the start of 2024, and built a large share of components and pages. I also wrote much of the copy used in the client case studies homepage, article index, project pages, services index, contact us, team page",
+      "description": "",
+      "tags": ["React", "AstroJS", "Sanity CMS", "Copywriting"]
+    },
+    {
+      "name": "myGiide",
+      "type": "webapp",
+      "linkLive": "",
+      "imageSrc": "/uploads/myGiide-screenshot.webp",
+      "imageAlt": "A collage of screenshots taken from the myGiide webapp.",
+      "subheading": "Built to complement a book published by a professor at Northeastern University, this web app helps users to understand their level of cross-cultural competence. My primary contributions to the app were for v1 and included backend work building API routes and interacting with the database, as well as frontend work building the surveys, components, and pages that make up the UI.",
+      "description": "",
+      "tags": ["Python", "Flask", "MongoDB", "pytest", "APIs"]
+    },
+    {
+      "name": "Carbon Calculator",
+      "type": "webapp",
+      "linkLive": "https://www.concernusa.org",
+      "imageSrc": "/uploads/CarbonCalculator-screenshot.webp",
+      "imageAlt": "A collage of screenshots taken from Concern USA's Carbon Calculator webapp.",
+      "subheading": "This webapp surveys users to determine their carbon footprint based on lifestyle and daily activities. The majority of my work on this project was creating custom components for use in the survey and across the webapp.",
+      "description": "",
+      "tags": ["!framework", "Web Components", "Shoelace", "Netlify"]
+    }
+  ]
+}
