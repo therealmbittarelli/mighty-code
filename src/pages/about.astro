@@ -1,0 +1,419 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ImageBanner from '../components/ImageBanner/ImageBanner.astro';
+
+---
+
+<Layout title="Thanks for visiting my plot of internet real estate!">
+	<main>
+    <p id="about-construction">🚧 Oct 2024: design and content actively under construction! but will leave a few tidbits in the meantime. 🚧</p>
+    <h1 id="about-heading">Hi! I'm Maggie.</h1>
+    <p></p>
+    <!-- <div id="emoji-parade">🎺✨🥝🌲🎶🤯💤🦸🦦🍁🍃🧙‍♂️🧝‍♂️🇳🇿🏰🐌🐞🌻🌈🥸</div> -->
+		<div id="about-content">
+
+      <!-- <p>🎺 I've played trumpet in a slew of street bands over the past decade+</p>
+      <p>🎺 Huge The Office nerd right here!</p>
+      <p>🧙‍♂️🧝‍♂️ ... also huge Lord of the Rings nerd right here!</p>
+      <p>🇳🇿 Unrelated (but... maybe actually related?), New Zealand as a unit is my favorite place in the world.</p>
+      <p>🍁 I'm a native plant evangelist and take a "Is it friendly to beneficial insects/birds/animals" approach to the land I steward ("own").</p>
+      <p>🤖 One of the most difficult and best things I've done in life is to switch careers in my mid 30s. I took an intensive, very challenging 5-month software development course, landed a job, and haven't looked back since!</p> -->
+
+        <div class="box one">
+          <p class="blurb">I'm a native plant evangelist!</p>
+          <img src="/uploads/wildflowers.webp" alt="A simple sketch of wildflowers and bees." />
+
+      </div>
+      <div class="box two">
+
+        <p class="blurb">Call me a bookworm - I'm a voracious reader and a sucker for a good story. Check out my adventures on Goodreads.</p>
+        <a href="https://www.goodreads.com/user/show/130722412-maggie-mae" rel="noreferrer noopener" target="_blank"><img src="/uploads/goodreads-logo.webp" alt="Goodreads" /></a>
+      </div>
+      <div class="box three">
+        <div>
+          <span class="green"/>
+          <span class="white"/>
+          <span class="red"/>
+        </div>
+        <p class="blurb">Studio italiano! My husband is applying for Italian citizenship through his parents/heritage; to follow suit as his spouse, I need to pass an intermediate language exam 😅<br/><br/>At least 1x/week, I have a lesson with a tutor via video chat. Highly recommend Italki for finding excellent language tutors!</p>
+      </div>
+      <div class="box four">
+        <!-- <p class="blurb">4</p> -->
+        <p class="blurb">One of the most difficult and best things I've done in life is to switch careers in my mid 30s. I took an immersive, challenging 5-month software development course, landed a job, and haven't looked back since!</p>
+      </div>
+      <div class="box five">
+        <!-- <p class="blurb">5</p> -->
+
+        <p class="blurb">Ever wonder who's inside the mascot costume when you go to a baseball game? Well, on a few occasions, it may have been me. I was the mascot for the Brockton Rox!<br/><span class="arrow-down-icon desktop-only">&#8623;</span></p>
+      </div>
+      <div class="box six">
+        <img src="/uploads/soh-pronk.webp" alt="Maggie leads a parade of street band friends through the street in Providence, RI during a PRONK! Festival." />
+        <p class="blurb">I've played trumpet in a slew of street bands over the past decade+. Gigs have ranged from a crowd of 2 or 3 bored people to national television!</p>
+      </div>
+      <div class="box seven">
+        <p class="blurb"></p>
+
+      </div>
+      <div class="box eight">
+        <p class="blurb">My favorite place on earth is New Zealand.</p>
+        <p id="nz-flag">🇳🇿</p>
+
+      </div>
+      <div class="box nine">
+      </div>
+      <div class="box ten">
+      </div>
+
+      <div class="box eleven">
+        <!-- <p class="blurb">11</p> -->
+        <p class="blurb">I'm pretty nerdy when it comes to The Office and The Lord of the Rings.</p>
+      </div>
+      <div class="box twelve">
+        <p class="blurb">One of the most difficult and best things I've done in life is to switch careers in my mid 30s. I took an immersive, challenging 5-month software development course, landed a job, and haven't looked back since!</p>
+      </div>
+      <div class="box thirteen">
+        <img
+          src="/uploads/rox-ko.webp"
+          alt="K.O., the kangaroo mascot of the Brockton Rox, waves at the camera."
+          class="desktop-only"
+        />
+      </div>
+  </div>
+
+    </div>
+	</main>
+</Layout>
+
+<style>
+  body:has(#about-content) {
+    /* background-color: rgb(236, 236, 235); */
+  }
+
+	main {
+		margin: auto;
+		padding: 1rem;
+		max-width: calc(100% - 2rem);
+		font-size: 20px;
+    color: #101521;
+		line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+	}
+
+  #about-construction {
+    width: 100%;
+    text-align: center;
+  }
+
+  #about-heading, p {
+    /* color: #f5f8e5; */
+    /* color: rgb(219, 220, 246); */
+  }
+  #about-heading {
+    font-family: 'Charsey';
+    font-size: 4rem;
+    margin-bottom: unset;
+  }
+  p {
+    font-family: 'Charsey';
+    font-size: 1.1rem;
+  }
+
+  #about-content {
+    align-self: center;
+    width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* 6 columns */
+    grid-template-rows: repeat(5, auto); /* 6 rows */
+    grid-template-areas:
+      "one two two three three three"
+      "four four nine three three three"
+      "four four six six five five"
+      "seven seven six six eight thirteen"
+      "ten eleven eleven twelve twelve thirteen";
+    gap: .25rem;
+    container: cards / inline-size;
+
+  }
+
+  .box {
+    border-radius: .5rem;
+    background-color: #2e4b92;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #2e4b92;
+  }
+  .box img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Box grid */
+  .one {
+    grid-area: one;
+    overflow: hidden;
+  }
+  .one img {
+    margin-top: 26px;
+    height: 100%;
+    object-fit: cover;
+  }
+  .two {
+    grid-area: two;
+  }
+  .two p {
+    margin: 0;
+  }
+  .two a {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: .5rem;
+  }
+  .two img {
+    width: 30%;
+    height: auto;
+    margin-top: 0;
+  }
+  .three {
+    grid-area: three;
+    display: flex;
+    flex-direction: column;
+  }
+  .three > div {
+    height: 33%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+
+  }
+  .three .red {
+    background-color: red;
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+  }
+  .three .white {
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+
+  }
+  .three .green {
+    background-color: green;
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+
+  }
+  .three p {
+    align-self: center;
+    margin-bottom: -5rem;
+  }
+  .four {
+    grid-area: four;
+  }
+  .five {
+    grid-area: five;
+  }
+  .five .blurb {
+    display: flex;
+    flex-direction: column;
+  }
+  .five .arrow-down-icon {
+    color: #f5f8e5;
+    align-self: flex-end;
+    margin-right: 3rem;
+    font-size: 4rem;
+    margin-top: -3rem;
+    margin-bottom: -2rem;
+  }
+  .six {
+    grid-area: six;
+    /* background: rgb(153,135,190); */
+  }
+  .six p {
+    margin: 0;
+  }
+  .seven {
+    grid-area: seven;
+    /* background: rgb(157,21,71); */
+  }
+
+  .eight {
+    grid-area: eight;
+    /* background: rgb(157,21,71); */
+  }
+  .eight .blurb {
+    margin-top: unset;
+  }
+  .eight #nz-flag {
+    font-size: 4rem;
+    margin: unset;
+    line-height: 0;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .nine {
+    grid-area: nine;
+    min-width: 40px;
+    min-height: 80px;
+    width: auto;
+    background-color: #7597ee;
+    display: no÷ne;
+  }
+  .ten {
+    grid-area: ten;
+    background-color: #936fc3;
+  }
+  .eleven {
+    grid-area: eleven;
+    /* background: rgb(157,21,71); */
+  }
+  .twelve {
+    grid-area: twelve;
+    /* background: rgb(157,21,71); */
+  }
+  .thirteen {
+    grid-area: thirteen;
+    /* background: rgb(157,21,71); */
+  }
+  .thirteen img {
+    height: 100%;
+    max-width: unset;
+    object-fit: cover;
+  }
+
+  .fourteen {
+    grid-area: fourteen;
+    /* background: rgb(157,21,71); */
+  }
+  .fifteen {
+    grid-area: fifteen;
+    /* background: rgb(157,21,71); */
+  }
+
+  .blurb {
+    padding: 1rem;
+    /* color: rgb(219, 220, 246); */
+    color: white;
+    justify-self: center;
+  }
+
+
+  @media (max-width: 1030px) {
+    .desktop-only {
+      display: none;
+    }
+
+    #about-content {
+      align-self: center;
+      width: 100%;
+      /* display: flex;
+      flex-direction: column;
+      text-align: center; */
+      display: grid;
+      grid-template-columns: repeat(3, auto); /* 3 columns */
+      grid-template-rows: repeat(8, auto); /* 6 rows */
+      grid-template-areas:
+        "one two two"
+        "three three three"
+        "four four nine"
+        "five six six"
+        "seven seven seven" 
+        "eight thirteen thirteen"
+        "ten eleven eleven"
+        "nine nine twelve";
+      gap: .75rem;
+    }
+
+    .one .blurb {
+      padding: .5rem;
+    }
+    .one img {
+      /* height: 100%; */
+      margin-top: unset;
+    }
+
+    .three .blurb {
+      margin-bottom: -1rem;
+      margin-top: -.25rem;
+      padding: 1.5rem 1rem;
+    }
+    .three br:first-of-type {
+      display: none;
+    }
+
+    .five .arrow-down-icon {
+      margin-top: -1rem;
+      transform: rotate(-45deg);
+    }
+
+    .eight {
+      padding-bottom: 2rem;
+    }
+    .eight .blurb {
+      margin-top: unset;
+      /* padding-top: unset; */
+    }
+    .eight .nz-flag {
+      margin-bottom: 1.5rem;
+    }
+
+    .twelve {
+    }
+    .twelve img {
+      display: none;
+    }
+
+    .thirteen {
+      background-color: rgb(235, 78, 78);
+    }
+    .thirteen img {
+      margin: auto 0;
+    }
+  }
+
+
+
+  @media (max-width: 769px) {
+    #about-content {
+      display: flex;
+      flex-direction: column;
+      align-self: unset;
+      gap: .5rem;
+    }
+
+    .one {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+
+    }
+    .one .blurb {
+      /* margin-left: .5rem; */
+      text-align: center;
+      width: 20ch;
+      z-index: 5;
+      color: #ff0077;
+      font-size: larger;
+      font-weight: 700;
+      height: 100%;
+      background-color: rgb(240, 248, 255, .7);
+      margin: 20px auto;
+      line-height: 1.8rem;
+    }
+    .one img {
+      position: absolute;
+      width: 100%;
+      object-position: bottom;
+    }
+
+    .nine, .ten, .thirteen {
+      display: none;
+    }
+  }
+</style>
