@@ -1,0 +1,32 @@
+/* Header styles */
+
+header {
+  display: grid;
+  background: #101521;
+  padding: 16px;
+}
+
+/* Logo link */
+.logoLink {
+  height: 100%;
+  height: 70px;
+  width: auto;
+  border-radius: .5rem;
+  justify-self: flex-end;
+}
+
+/* Logo image */
+.logo {
+  height: 70px;
+  width: auto;
+  border-radius: .5rem;
+  margin-right: .5rem;
+}
+
+/* Small mobile mode */
+@media (max-width: 550px) {
+  /* Logo link */
+  .logoLink {
+    justify-self: center;
+  }
+}

@@ -1,0 +1,182 @@
+/* ProjectWidget styles */
+
+.projectWidget {
+  display: flex;
+  flex-direction: row;
+  gap: 3.5rem;
+  max-width: 900px;
+  background-color: #2e4b92;
+  padding: 0 1.5rem 1rem;
+  border-radius: .5rem;
+}
+
+/* All <p> */
+.projectWidget p {
+  font-family: 'Charsey';
+  color: white;
+}
+
+/* H2 */
+h2 {
+  color: orange;
+  font-family: 'Charsey';
+}
+
+/* UL */
+.projectButtons {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  min-width: 190px;
+  width: 100%;
+  width: max-content;
+  padding-left: 0;
+  gap: 1rem;
+}
+
+/* LI */
+.listItem {
+  list-style-type: none;
+  max-width: 15ch;
+  position: relative;
+  width: 100%;
+}
+.listItem:hover {
+  background-color: white;
+}
+
+/* Button */
+.buttonTab {
+  background-color: transparent;
+  border: unset;
+  cursor: pointer;
+  text-align: left;
+  position: relative;
+  transition: background-color .15s ease-in-out;
+  pointer-events: all;
+}
+.buttonTab.selected .buttonName,
+.buttonTab:focus .buttonName,
+.buttonTab[aria-current="true"] .buttonName {
+  color: orange;
+  font-weight: 700;
+}
+.buttonTab:hover .buttonName {
+  transform: translateY(10deg);
+}
+
+/* Span */
+.buttonName {
+  font-size: 1.2rem;
+  pointer-events: none;
+  color: #f5f8e5;
+  font-family: 'Charsey';
+}
+
+/* Project name */
+.projectName {
+  display: inline-block;
+  margin-right: 2rem;
+  font-weight: 600;
+  font-size: 2rem;
+  margin-bottom: unset;
+  color: rgb(247, 209, 2);
+  font-family: 'Charsey';
+}
+
+/* Project link */
+.visitLink {
+  color: orange;
+  text-decoration: none;
+  font-family: 'Charsey';
+  font-weight: 700;
+
+}
+.visitLink:visited {
+  color: rgb(255, 128, 0);
+}
+
+/* List of description links */
+.descriptionLinksList {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: .5rem;
+  padding-left: unset;
+  justify-content: center;
+}
+
+/* Description link */
+.descriptionLink {
+  color: rgb(247, 209, 2);
+  text-decoration: none;
+  font-weight: 600;
+}
+.descriptionLink:visited {
+  color: rgb(255, 128, 0);
+}
+
+/* UL */
+.tagList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-left: unset;
+  margin-top: 2rem;
+}
+
+/* LI */
+.tag {
+  border: 3px solid rgb(247, 129, 2);
+  border-radius: 2rem;
+  width: fit-content;
+  padding: .25rem 1rem;
+  list-style-type: none;
+  font-size: 1rem;
+  color: rgb(8, 248, 108);
+}
+
+/* Mobile mode */
+@media (max-width: 769px) {
+  .projectWidget {
+    flex-direction: column;
+    gap: unset;
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+  /* H2 */
+  h2 {
+    text-align: center;
+    font-size: 2.3rem;
+  }
+
+  /* Project buttons */
+  .projectButtons {
+    width: 100%;
+    flex-direction: row;
+    gap: .5rem;
+    align-items: center;
+    text-align: center;
+    overflow-x: scroll;
+    background: #101521;
+    padding: .5rem;
+    margin-left: -8px;
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+  }
+
+  /* Even numbered buttons */
+  .even {
+    color: rgb(249, 215, 153)
+  }
+
+  /* Project name */
+  .projectName {
+    margin-top: unset;
+  }
+}
