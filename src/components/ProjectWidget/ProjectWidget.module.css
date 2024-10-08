@@ -44,7 +44,7 @@ h2 {
   width: 100%;
 }
 .listItem:hover {
-  background-color: white;
+  background-color: rgb(5, 5, 5);
 }
 
 /* Button */
@@ -89,7 +89,7 @@ h2 {
 /* Project link */
 .visitLink {
   color: orange;
-  text-decoration: none;
+  text-decoration-style: wavy;
   font-family: 'Charsey';
   font-weight: 700;
 
@@ -112,8 +112,8 @@ h2 {
 /* Description link */
 .descriptionLink {
   color: rgb(247, 209, 2);
-  text-decoration: none;
   font-weight: 600;
+  text-decoration-style: wavy;
 }
 .descriptionLink:visited {
   color: rgb(255, 128, 0);

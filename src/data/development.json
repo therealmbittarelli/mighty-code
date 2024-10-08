@@ -1,7 +1,7 @@
 {
   "projects": [
     {
-      "name": "Neutrogena Skin360",
+      "name": "Neutrogena US Skin360",
       "type": "webapp",
       "linkLive": "https://skin360.neutrogena.com/",
       "imageSrc": "/uploads/Skin360-screenshot.webp",
