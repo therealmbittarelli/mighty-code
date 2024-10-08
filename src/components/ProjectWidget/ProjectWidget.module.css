@@ -98,9 +98,25 @@ h2 {
   color: rgb(255, 128, 0);
 }
 
-/* LI */
-.descriptionPoint {
-  color: #f5f8e5;
+/* List of description links */
+.descriptionLinksList {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: .5rem;
+  padding-left: unset;
+  justify-content: center;
+}
+
+/* Description link */
+.descriptionLink {
+  color: rgb(247, 209, 2);
+  text-decoration: none;
+  font-weight: 600;
+}
+.descriptionLink:visited {
+  color: rgb(255, 128, 0);
 }
 
 /* UL */
@@ -162,10 +178,5 @@ h2 {
   /* Project name */
   .projectName {
     margin-top: unset;
-  }
-
-  /* LI */
-  .descriptionPoint {
-    margin-left: -1.3rem;
   }
 }

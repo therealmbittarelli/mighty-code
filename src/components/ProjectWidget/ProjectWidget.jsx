@@ -65,6 +65,8 @@ const ProjectWidget = ({ projects }) => {
             <a
               className={styles.visitLink}
               href={projects[projectNumber].linkLive}
+              target="_blank"
+              rel="noreferrer noopener"
             >
               Visit
             </a>
@@ -72,8 +74,8 @@ const ProjectWidget = ({ projects }) => {
           <p>
             {projects[projectNumber].subheading && projects[projectNumber].subheading}
           </p>
-          <ul>
-            {generateDescriptionPoints(projects[projectNumber].description, projects[projectNumber].name)}
+          <ul className={styles.descriptionLinksList}>
+            {generateDescriptionLinks(projects[projectNumber].description, projects[projectNumber].name)}
           </ul>
 
           <ul className={styles.tagList}>
@@ -85,23 +87,33 @@ const ProjectWidget = ({ projects }) => {
   }
 
   /**
-   * Generates bulleted list items containing information about my participation in a given project, as available.
-   * @param {array} points - An array of description bullet points.
+   * Generates bulleted list links containing information about my participation in a given project, as available.
+   * @param {array} links - An array of description bullet links.
    * @param {string} projectName - The name of the project.
-   * @returns {jsx} List item project description points jsx.
+   * @returns {jsx} List item project description links jsx.
    */
-  const generateDescriptionPoints = (points, projectName) => {
-    // Initialize array to hold description points jsx to be returned
+  const generateDescriptionLinks = (links, projectName) => {
+    // Initialize array to hold description links jsx to be returned
     let jsx = [];
 
     // Initialize counter for use as each `<li>`'s React key
     let count = 0;
 
-    // Generate a description point
-    for (let point of points) {
+    // Generate a description link
+    for (let link of links) {
       jsx.push(
-        <li key={`description-${projectName.toLowerCase().replaceAll(' ', '-')}-${count}`} className={styles.descriptionPoint}>
-          <p>{point}</p>
+        <li
+          key={`description-${projectName.toLowerCase().replaceAll(' ', '-')}-${count}`}
+          className={styles.descriptionLinkItem}
+        >
+          <a
+            href={`${link.href}`}
+            rel="noreferrer noopener"
+            target="_blank"
+            className={styles.descriptionLink}
+          >
+            {link.siteName}
+          </a>
         </li>
       );
       count++;
