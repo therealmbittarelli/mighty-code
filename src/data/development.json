@@ -1,17 +1,37 @@
 {
   "projects": [
     {
-      "name": "Neutrogena Skin360",
+      "name": "Neutrogena US Skin360",
       "type": "webapp",
       "linkLive": "https://skin360.neutrogena.com/",
       "imageSrc": "/uploads/Skin360-screenshot.webp",
       "imageAlt": "A collage of screenshots taken from the Skin360 webapp.",
-      "subheading": "Skin360 uses facial scan and survey data to recommend skincare routines and products to users. The core functionality of this webapp is in fact implemented in more than several different web contexts. The team I was part of built and maintains sibling instances for NTG US, NTG CA (French Canadian and English), NTG Brazil (Portuguese and English), NTG India, Walmart, CVS, and Neostrata.",
+      "subheading": "Skin360 uses facial scan and survey data to recommend skincare routines and products to users. Over the course of 4 years, I worked across all screens of the app, implementing logic and building custom components through several app redesigns. A portion of my time on this project was consumed by the creation and maintenance of REST APIs, data pipelines, and other microservices. Our team migrated the entire app to NextJS in 2024, refactoring legacy code with scalability and future-proofing front of mind. The core functionality of this webapp is in fact implemented in more than several different web contexts, with varied designs, app flow, and product interaction functionality. The team I was part of built and maintains sibling instances, including:",
       "description": [
-        "Worked across all screens of the webapp, implementing logic and crafting custom components to design specs",
-        "Built and maintained backend routes to collect user data and select skincare routines and products based on survey and face scan input",
-        "Built and maintained data pipelines to pull product data from appropriate APIs (Neutrogena and partners)", 
-        "Contributed to various microservices used to maintain the integrity and security of the app"
+        {
+          "siteName": "NTG CA,",
+          "href": "https://skin360.neutrogena.ca/skin360 n"
+        },
+        {
+          "siteName": "NTG Brasil,",
+          "href": "https://skin360.skinloversclub.com.br/"
+        },
+        {
+          "siteName": "Neostrata,",
+          "href": "https://skin360.neostrata.com/"
+        },
+        {
+          "siteName": "NTG India,",
+          "href": "https://skin360.neutrogena.in/"
+        },
+        {
+          "siteName": "CVS,",
+          "href": "https://cvs.neutrogena.com/"
+        },
+        {
+          "siteName": "Walmart",
+          "href": "https://walmart.neutrogena.com/"
+        }
       ],
       "tags": ["NextJS", "JavaScript", "NodeJS", "Python", "MySQL", "Jest", "pytest", "Netlify", "REST APIs", "Custom Microservices"]
     },
