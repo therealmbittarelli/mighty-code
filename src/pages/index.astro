@@ -1,72 +1,41 @@
 ---
-// Components
 import Layout from '../layouts/Layout.astro';
-import ProjectWidget from '../components/ProjectWidget/ProjectWidget.jsx';
-
-// Data
-import data from '../data/development.json';
-
-// Generate the approximate duration of my hands-on dev experience
-let presentDate = new Date();
-let startDate = new Date('2020-01-01');
-let howManyYears = presentDate.getUTCFullYear() - startDate.getUTCFullYear();
-
-let qualifier = "over"
-if (((presentDate.getUTCMonth()+1) - (startDate.getUTCMonth()+1)) > 6) {
-  qualifier = "about";
-  howManyYears++;
-}
 ---
 
-<Layout title="Maggie Bittarelli | Development Portfolio">
+<Layout title="Maggie Bittarelli | Personal Site">
 	<main>
     <div id="main-content">
       <h1 id="main-heading">Hi! I'm Maggie.</h1>
+      <p class="main-info intro">I'm a full-stack developer who builds clean, accessible, performant websites and webapps. </p>
+      <p class="main-info">I create custom solutions in JavaScript and Typescript, frequently leveraging frameworks like React, and recently working with AstroJS.<br/>I'm a wiz with Python, and love the satisfaction of navigating a database via a well-written query.</p>
 
-      <h2 id="subheading">I've been building interesting things on the web for {qualifier} {howManyYears} years</h2>
-
-      <p id="current-status">As of Autumn 2024, I'm overhauling this site, dedicating time to building an ecommerce website for a local artist, becoming proficient in TypeScript, and working on a few other personal projects that I plan to release in the coming months. If you think I'd be a good addition to your team, I'd love to connect!</p>
-
-      <p id="dev-blurb">For the last 4.25 years of my career, I was a major player on a small team of <a id="gs-team" href="https://www.graftonstudio.com/our-team" target="_blank" rel="noreferrer noopener">stellar devs</a>. Performance, accessibility, and responsive design have always been fore-most considerations from the onset with every project I've been on. I thrive in an independent work setting that incorporates respectful, enthusiastic, and empathetic collaboration with developers, designers, and project managers. Check out a non-exhaustive list of projects to which I've made significant contributions below.</p>
-
-      <ProjectWidget client:load projects={data.projects}></ProjectWidget>
+      <a href="/development" aria-label="Web Development page" id="dev-icon-link">
+        <span class="source-code-icon">
+          <svg preserveAspectRatio="xMidYMid meet" data-bbox="72.75 200 100.975 100.975" viewBox="72.75 200 100.975 100.975" height="8.5rem" width="8.5rem" xmlns="http://www.w3.org/2000/svg" data-type="color" role="presentation" aria-hidden="true">
+          <g>
+            <path d="M94.09 200a21.295 21.295 0 0 0-21.34 21.34v58.295a21.295 21.295 0 0 0 21.34 21.34h58.295a21.295 21.295 0 0 0 21.34-21.34v-58.294A21.295 21.295 0 0 0 152.386 200H94.091zm29.148 21.037c16.29 0 29.451 13.16 29.451 29.45 0 16.291-13.16 29.452-29.451 29.452-16.29 0-29.451-13.16-29.451-29.451 0-16.29 13.16-29.451 29.45-29.451z"
+            fill="transparent" opacity="2" data-color="1"></path>
+            <path d="M168.591 250.485c0 25.05-20.307 45.354-45.353 45.354-25.047 0-45.353-20.304-45.353-45.354 0-25.044 20.306-45.348 45.353-45.348 25.046 0 45.353 20.304 45.353 45.348z"
+            fill="#94286F" data-color="2"></path>
+            <path d="M136.839 255.022h-3.022v-4.03h-28.21v25.187c0 2.82 2.216 5.037 5.037 5.037h18.135c2.821 0 5.038-2.216 5.038-5.037v-3.023h3.022c2.821 0 5.037-2.216 5.037-5.037v-8.06c0-2.82-2.216-5.037-5.037-5.037zm-21.258 18.638-1.713 1.008-4.433-7.556 4.333-7.557 1.712 1.008-3.627 6.549 3.728 6.548zm3.123.806-2.015-.604 4.03-14.105 1.914.504-3.929 14.205zm6.952.202-1.713-1.008 3.728-6.548-3.728-6.55 1.713-1.007 4.332 7.557-4.332 7.556zm14.206-6.549c0 1.713-1.31 3.022-3.023 3.022h-3.022v-14.104h3.022c1.713 0 3.023 1.31 3.023 3.022v8.06z"
+            fill="#000000" data-color="2"></path>
+            <path d="M129.787 248.977h-2.015v-2.015a2.02 2.02 0 0 0-2.015-2.015h-14.105c-2.217 0-4.03-1.814-4.03-4.03s1.813-4.03 4.03-4.03h14.105c1.108 0 2.015-.907 2.015-2.015s-.907-2.015-2.015-2.015h-14.105c-2.217 0-4.03-1.814-4.03-4.03s1.813-4.03 4.03-4.03h14.105a2.02 2.02 0 0 0 2.015-2.015v-2.015h2.015v2.015a4.042 4.042 0 0 1-4.03 4.03h-14.105c-1.108 0-2.015.907-2.015 2.015s.907 2.015 2.015 2.015h14.105c2.216 0 4.03 1.813 4.03 4.03s-1.814 4.03-4.03 4.03h-14.105c-1.108 0-2.015.907-2.015 2.015s.907 2.015 2.015 2.015h14.105a4.042 4.042 0 0 1 4.03 4.03v2.015z"
+            fill="#000000" data-color="2"></path>
+          </g>
+          </svg>
+          <svg margin-top="-55" height="8.5rem" width="8.5rem" xmlns="http://www.w3.org/2000/svg">
+          <text fill="#E5C58F" font-size="150" font-weight="bold">MKB</text>
+          </svg> 
+        </span>
+      </a>
     </div>
 	</main>
 </Layout>
 
 <style>
-  #main-content {
-    padding: 1rem;
-    margin: auto;
-		max-width: 900px;
-		font-size: 20px;
-		line-height: 1.6;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-	}
-
-  #main-heading {
-    font-size: 7rem;
+  h1 {
+    font-family:'Charsey';
     line-height: 3.25rem;
-    font-family: 'OfficeSqueeze';
-    margin-bottom: 2rem;
-    text-align: center;
-  }
-
-  #subheading {
-    text-align: center;
-    max-width: 730px;
-    margin-top: 3rem;
-    color: #94286F;
-    font-family: 'Charsey';
-  }
-
-  #current-status {
-    font-size: 1.3rem;
-    font-family: 'Charsey';
-    font-weight: 600;
-    /* max-width: 750px; */
   }
 
   #gs-team {
@@ -81,52 +50,68 @@ if (((presentDate.getUTCMonth()+1) - (startDate.getUTCMonth()+1)) > 6) {
   #dev-blurb {
     font-family: 'Charsey';
     margin-bottom: 3rem;
-    margin-top: 2rem;
-    /* max-width: 750px; */
-    /* text-align: center; */
-    /* width: 100%; */
+  }
+	main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    margin: auto;
+		width: 800px;
+		max-width: calc(100% - 2rem);
+		font-size: 20px;
+		line-height: 1.6;
+	}
+
+  #main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
-  /* Mobile mode */
-  @media (max-width: 769px) {
-    #main-content {
-      margin: 0 1rem;
-      /* padding: 0 1rem; */
-    }
+  #main-heading {
+    /* color: #f5f8e5; */
+    font-size: 7rem;
+    font-family: 'OfficeSqueeze';
+    transition: margin-left 1 ease-in-out;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
 
+  .main-info {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    /* color: #f5f8e5; */
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    max-width: 650px;
+  }
+  .main-info.intro {
+    font-size: 1.6rem;
+    /* color:rgb(164, 4, 182); */
+    color: #94286F;
+    text-align: center;
+  }
+  .main-info.disclaimer {
+    font-size: 1.6rem;
+    text-align: center;
+    color:rgb(255, 111, 0);
+  }
+
+  #dev-icon-link {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+
+  .source-code-icon {
+    height: 8.5rem;
+    width: 8.5rem;
+  }
+
+  @media (max-width: 769px) {
     #main-heading {
       font-size: 5rem;
-      line-height: 4.5rem;
-      margin-bottom: unset;
-    }
-
-    #subheading {
-      margin-bottom: 1rem;
-      max-width: 450px;
-    }
-  }
-
-  /* Smaller mobile mode */
-  @media (max-width: 550px) {
-    #main-content {
-      margin: 0 .5rem;
-    }
-    #main-heading {
-      font-size: 3rem;
-      line-height: 3.5rem;
-      margin-top: 1rem;
-    }
-
-    #subheading {
-      margin-top: 1rem;
-      font-size: 1.5rem;
-      line-height: 2.25rem;
-      margin-bottom: unset;
-      width: 100%;
-    }
-
-    #dev-blurb {
-      margin-top: 1rem;
     }
   }
 </style>
