@@ -51,6 +51,7 @@ const Header = ({ links }) => {
 
     // Build a list item nav link for each menu option
     for (let link of links) {
+
       // Add desktop/mobile-only class, as appropriate
       let dynamicClass;
       if (!link.showOnMobile) {
@@ -62,11 +63,11 @@ const Header = ({ links }) => {
 
       // Build nav link
       jsx.push(
-        <li>
+        <li className={[styles.navLinkItem, dynamicClass].join(' ')}>
           <a
             key={link.copy.toLowerCase().replaceAll(' ', '-')}
             href={link.linkHref} 
-            className={[styles.navLink, dynamicClass].join(' ')}
+            className={styles.navLink}
             aria-label={link.copy}
           >
             <p className={styles.linkCopy}>{link.copy}</p>
@@ -85,12 +86,12 @@ const Header = ({ links }) => {
       {/* Logo */}
       {generateLogo()}
 
-      {/* For v1 */}
-      {/* <nav className={styles.navLinks}>
-        <ul>
+      {/* Nav Links */}
+      <nav className={styles.nav}>
+        <ul className={styles.navLinks}>
           {generateNavLinks()}
         </ul>
-      </nav> */}
+      </nav>
 
     </header>
   )
