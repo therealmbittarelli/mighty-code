@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import LinkCard from '../components/LinkCard.astro';
 ---
 
 <Layout title="Maggie Bittarelli | Personal Site">
@@ -8,28 +9,13 @@ import Layout from '../layouts/Layout.astro';
       <h1 id="main-heading">Hi! I'm Maggie.</h1>
       <p class="main-info intro">I'm a full-stack developer who builds clean, accessible, performant websites and webapps. </p>
       <p class="main-info">I create custom solutions in JavaScript and Typescript, frequently leveraging frameworks like React, and recently working with AstroJS.<br/>I'm a wiz with Python, and love the satisfaction of navigating a database via a well-written query.</p>
-
-      <a href="/development" aria-label="Web Development page" id="dev-icon-link">
-        <span class="source-code-icon">
-          <svg preserveAspectRatio="xMidYMid meet" data-bbox="72.75 200 100.975 100.975" viewBox="72.75 200 100.975 100.975" height="8.5rem" width="8.5rem" xmlns="http://www.w3.org/2000/svg" data-type="color" role="presentation" aria-hidden="true">
-          <g>
-            <path d="M94.09 200a21.295 21.295 0 0 0-21.34 21.34v58.295a21.295 21.295 0 0 0 21.34 21.34h58.295a21.295 21.295 0 0 0 21.34-21.34v-58.294A21.295 21.295 0 0 0 152.386 200H94.091zm29.148 21.037c16.29 0 29.451 13.16 29.451 29.45 0 16.291-13.16 29.452-29.451 29.452-16.29 0-29.451-13.16-29.451-29.451 0-16.29 13.16-29.451 29.45-29.451z"
-            fill="transparent" opacity="2" data-color="1"></path>
-            <path d="M168.591 250.485c0 25.05-20.307 45.354-45.353 45.354-25.047 0-45.353-20.304-45.353-45.354 0-25.044 20.306-45.348 45.353-45.348 25.046 0 45.353 20.304 45.353 45.348z"
-            fill="#94286F" data-color="2"></path>
-            <path d="M136.839 255.022h-3.022v-4.03h-28.21v25.187c0 2.82 2.216 5.037 5.037 5.037h18.135c2.821 0 5.038-2.216 5.038-5.037v-3.023h3.022c2.821 0 5.037-2.216 5.037-5.037v-8.06c0-2.82-2.216-5.037-5.037-5.037zm-21.258 18.638-1.713 1.008-4.433-7.556 4.333-7.557 1.712 1.008-3.627 6.549 3.728 6.548zm3.123.806-2.015-.604 4.03-14.105 1.914.504-3.929 14.205zm6.952.202-1.713-1.008 3.728-6.548-3.728-6.55 1.713-1.007 4.332 7.557-4.332 7.556zm14.206-6.549c0 1.713-1.31 3.022-3.023 3.022h-3.022v-14.104h3.022c1.713 0 3.023 1.31 3.023 3.022v8.06z"
-            fill="#000000" data-color="2"></path>
-            <path d="M129.787 248.977h-2.015v-2.015a2.02 2.02 0 0 0-2.015-2.015h-14.105c-2.217 0-4.03-1.814-4.03-4.03s1.813-4.03 4.03-4.03h14.105c1.108 0 2.015-.907 2.015-2.015s-.907-2.015-2.015-2.015h-14.105c-2.217 0-4.03-1.814-4.03-4.03s1.813-4.03 4.03-4.03h14.105a2.02 2.02 0 0 0 2.015-2.015v-2.015h2.015v2.015a4.042 4.042 0 0 1-4.03 4.03h-14.105c-1.108 0-2.015.907-2.015 2.015s.907 2.015 2.015 2.015h14.105c2.216 0 4.03 1.813 4.03 4.03s-1.814 4.03-4.03 4.03h-14.105c-1.108 0-2.015.907-2.015 2.015s.907 2.015 2.015 2.015h14.105a4.042 4.042 0 0 1 4.03 4.03v2.015z"
-            fill="#000000" data-color="2"></path>
-          </g>
-          </svg>
-          <svg margin-top="-55" height="8.5rem" width="8.5rem" xmlns="http://www.w3.org/2000/svg">
-          <text fill="#E5C58F" font-size="150" font-weight="bold">MKB</text>
-          </svg> 
-        </span>
-      </a>
     </div>
-	</main>
+    <ul id="card-list">
+      <LinkCard href="/development" title="Portfolio" body="Notable projects I've significantly contributed to" />
+      <LinkCard href="/my-projects" title="Weekly Projects" body="I'm doing a small project each week. Check it out!" />
+      <LinkCard href="/inktober" title="...Unrelated" body="For fun, my Inktober sketches" />
+    </ul>
+  </main>
 </Layout>
 
 <style>
@@ -57,13 +43,13 @@ import Layout from '../layouts/Layout.astro';
     align-items: center;
     padding: 1rem;
     margin: auto;
-		width: 800px;
-		max-width: calc(100% - 2rem);
 		font-size: 20px;
 		line-height: 1.6;
 	}
 
   #main-content {
+    width: 800px;
+		max-width: calc(100% - 2rem);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -97,6 +83,17 @@ import Layout from '../layouts/Layout.astro';
     color:rgb(255, 111, 0);
   }
 
+  #card-list {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1rem;
+    margin-left: unset;
+    padding-left: unset;
+    max-width: 1000px;
+    width: 100%;
+  }
+
   #dev-icon-link {
     display: flex;
     flex-direction: row;
@@ -110,8 +107,19 @@ import Layout from '../layouts/Layout.astro';
   }
 
   @media (max-width: 769px) {
+    #main-content {
+      width: 100%;
+    }
+
     #main-heading {
       font-size: 5rem;
+    }
+
+    #card-list {
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
     }
   }
 </style>
