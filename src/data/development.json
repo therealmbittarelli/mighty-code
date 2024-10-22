@@ -68,7 +68,7 @@
       "linkLive": "https://www.graftonstudio.com",
       "imageSrc": "/uploads/GS-screenshot.webp",
       "imageAlt": "A collage of screenshots taken from the Grafton Studio site.",
-      "description": "Over the duration of my time with Grafton Studio, I worked on two versions of this site. The first was an exercise in lean performance and semantic HTML, architected almost solely using HTML and CSS, with extremely minimal JavaScript (to handle identifying active links). I was one of just two main contributors to the currently deployed site, released at the start of 2024, and built a large share of components and pages. I also wrote much of the copy used in the client case studies homepage, article index, project pages, services index, contact us, team page",
+      "description": "During my time at Grafton Studio, I contributed to two versions of the company's site. The first iteration focused on lean performance and semantic HTML, utilizing primarily HTML and CSS with minimal JavaScript for a lightweight architecture. For the current live version, launched in early 2024, I was one of two primary contributors, responsible for building a significant portion of the site's components and pages. In addition to development, I also crafted much of the copy for the client case studies, ensuring clear, impactful communication of our project outcomes.",
       "descriptionLinks": "",
       "tags": ["React", "AstroJS", "Sanity CMS", "Copywriting"]
     },
