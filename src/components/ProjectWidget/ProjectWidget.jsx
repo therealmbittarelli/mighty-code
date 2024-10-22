@@ -8,7 +8,7 @@
 // Imports
 //------------------------------------------------------------------------------
 // Libraries
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 // CSS
 import styles from './ProjectWidget.module.css';
@@ -47,12 +47,27 @@ const ProjectWidget = ({ projects }) => {
   }
 
   /**
+   * Generates formatted description paragraphs; enables line breaks from the received JSON data.
+   * @returns {jsx} Formatted project description jsx.
+   */
+  const formatDescription = (description) => {
+    // Split project descriptions at '\n' to enable line break effects
+    return description.split('\n').map((line, index) => 
+      (
+        <React.Fragment key={index}>
+          {line}
+          <br></br>
+        </React.Fragment>
+      )
+    );
+  };
+
+  /**
    * Generates the description of the project, including heading, link, copy, and tags.
    * @returns {jsx} Project description jsx.
    */
   const generateProjectDescription = () => {
-
-      return (
+    return (
         <div
           key={projects[projectNumber].name}
           role="tabpanel"
@@ -71,11 +86,11 @@ const ProjectWidget = ({ projects }) => {
               Visit
             </a>
           </span>
-          <p>
-            {projects[projectNumber].subheading && projects[projectNumber].subheading}
+          <p className={styles.description}>
+            {projects[projectNumber].description && formatDescription(projects[projectNumber].description)}
           </p>
           <ul className={styles.descriptionLinksList}>
-            {generateDescriptionLinks(projects[projectNumber].description, projects[projectNumber].name)}
+            {generateDescriptionLinks(projects[projectNumber].descriptionLinks, projects[projectNumber].name)}
           </ul>
 
           <ul className={styles.tagList}>
@@ -83,7 +98,7 @@ const ProjectWidget = ({ projects }) => {
           </ul>
 
         </div>
-      );
+    );
   }
 
   /**
