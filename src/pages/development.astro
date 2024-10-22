@@ -10,7 +10,7 @@ let howManyYears = presentDate.getUTCFullYear() - startDate.getUTCFullYear();
 
 let qualifier = "over"
 if (((presentDate.getUTCMonth()+1) - (startDate.getUTCMonth()+1)) > 6) {
-  qualifier = "almost";
+  qualifier = "nearly";
   howManyYears++;
 }
 ---
@@ -20,12 +20,10 @@ if (((presentDate.getUTCMonth()+1) - (startDate.getUTCMonth()+1)) > 6) {
     <div id="dev-content">
       <h1 id="dev-heading">I've been building engaging web experiences for {qualifier} {howManyYears} years</h1>
 
-      <p id="current-status">As of Autumn 2024, I'm dedicating time to building a website for a local artist, becoming proficient in TypeScript, and working on a few other personal projects that I plan to release in the coming months. If you think I'd be a good addition to your development team, I'd love to connect!</p>
-
-      <p id="dev-blurb">For the last 4+ years of my career, I was a major player on a small team of <a id="gs-team" href="https://www.graftonstudio.com/our-team" target="_blank" rel="noreferrer noopener">stellar devs</a>. Performance, accessibility, and responsive design were fore-most considerations from the onset with each client. While my daily work was largely independent, I frequently collaborated with developers, designers, and project managers. Check out a non-exhaustive list of projects to which I've made significant contributions below.</p>
-
-
       <ProjectWidget client:load projects={data.projects}></ProjectWidget>
+
+      <p class="current-status">As of Autumn 2024, I'm dedicating time to building a website for a local artist, becoming proficient in TypeScript, and working on a few other personal projects that I plan to release in the coming months. </p>
+      <p class="current-status connect">If you think I'd be a good addition to your development team, I'd love to connect!</p>
     </div>
 	</main>
 </Layout>
@@ -46,6 +44,7 @@ if (((presentDate.getUTCMonth()+1) - (startDate.getUTCMonth()+1)) > 6) {
     font-family:'Charsey';
     line-height: 3.25rem;
     text-align: center;
+    margin-bottom: 3rem;
   }
 
   #gs-team {
@@ -57,9 +56,15 @@ if (((presentDate.getUTCMonth()+1) - (startDate.getUTCMonth()+1)) > 6) {
     color: #0453F1;
   }
 
-  #dev-blurb {
-    font-family: 'Charsey';
+  .current-status {
+    margin-top: 3rem;
+    font-size: 1.3rem;
+  }
+  .current-status.connect {
+    margin-top: 1rem;
     margin-bottom: 3rem;
+    font-size: 1.5rem;
+    text-align: center;
   }
 
   /* Mobile mode */
