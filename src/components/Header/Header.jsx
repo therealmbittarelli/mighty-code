@@ -63,7 +63,9 @@ const Header = ({ links }) => {
 
       // Build nav link
       jsx.push(
-        <li className={[styles.navLinkItem, dynamicClass].join(' ')}>
+        <li
+          key={link.copy.toLowerCase().replaceAll(' ', '-')}
+          className={[styles.navLinkItem, dynamicClass].join(' ')}>
           <a
             key={link.copy.toLowerCase().replaceAll(' ', '-')}
             href={link.linkHref} 
@@ -81,18 +83,19 @@ const Header = ({ links }) => {
 
   return (
     <header id="header">
-      <SkipLink />
+      <div>
+        <SkipLink />
 
-      {/* Logo */}
-      {generateLogo()}
+        {/* Logo */}
+        {generateLogo()}
 
-      {/* Nav Links */}
-      <nav className={styles.nav}>
-        <ul className={styles.navLinks}>
-          {generateNavLinks()}
-        </ul>
-      </nav>
-
+        {/* Nav Links */}
+        <nav className={styles.nav}>
+          <ul className={styles.navLinks}>
+            {generateNavLinks()}
+          </ul>
+        </nav>
+      </div>
     </header>
   )
 }
