@@ -97,6 +97,11 @@ h2 {
   color: rgb(255, 128, 0);
 }
 
+/* Project description */
+.description:not(:last-of-type) {
+  margin-bottom: 2rem;
+}
+
 /* List of description links */
 .descriptionLinksList {
   list-style: none;
@@ -125,7 +130,7 @@ h2 {
   flex-wrap: wrap;
   gap: 1rem;
   padding-left: unset;
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 /* LI */
