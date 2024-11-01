@@ -1,0 +1,90 @@
+---
+interface Props {
+    alt: string;
+    description: string;
+    promptData: {
+        number: string;
+        prompt: string;
+    };
+    src: string;
+}
+
+const { alt, description, promptData, src } = Astro.props;
+
+---
+
+<li class="image-card">
+  <img src={src} alt={alt} class="image-card-image"/>
+  <h3 class="image-card-prompt">{promptData.prompt}</h3>
+  <p class="image-card-description">{description ?? ''}</p>
+</li>
+
+<style>
+  .image-card {
+    background-color: rgb(41, 41, 41);
+    border-radius: .5rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 300px;
+  }
+
+  .image-card .image-card-image {
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    opacity: 1;
+    transition: opacity .25s ease-out;
+    object-fit: cover;
+    border-radius: .5rem;
+  }
+  .image-card:hover .image-card-image,
+  .image-card-image:hover {
+    opacity: 0;
+  }
+
+  .image-card-prompt {
+    font-size: 2rem;
+    text-align: center;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(255, 174, 0);
+    /* color: white; */
+    margin: .5rem 0;
+  }
+
+  .image-card-description {
+    color: rgb(241, 166, 5);
+    padding: 0 1rem;
+    opacity: 0;
+    text-align: center;
+    transition: opacity .25s ease-in;
+    font-size: 1.1rem;
+  }
+  .image-card:hover .image-card-description {
+    opacity: 1;
+  }
+
+  @media (max-width: 769px) {
+
+  }
+
+  @media (max-width: 420px) {
+    .image-card, .image-card .image-card-image {
+      /* height: 250px; */
+      width: 250px;
+      /* object-fit: cover; */
+    }
+
+    .image-card-prompt {
+      opacity: 0;
+      transition: opacity .25s ease-in-out;
+    }
+    .image-card:hover .image-card-prompt {
+      opacity: 1;
+      z-index: 5;
+    }
+  }
+</style>

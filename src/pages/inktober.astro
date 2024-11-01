@@ -1,0 +1,104 @@
+---
+// Components
+import ImageCard from '../components/ImageCard.astro';
+import Layout from '../layouts/Layout.astro';
+
+// Data
+import data from '../data/inktober.json';
+
+---
+<Layout title="Maggie Bittarelli | Development Portfolio">
+  <main id="inktober-page">
+    <h1 >Inktober 2024</h1>
+
+    <p id="subheading">As you'll quickly discover below, I'm not particularly gifted at drawing! I committed to doing <a href="https://www.inktober.com" rel="noreferrer noopener" target="_blank">Inktober</a> in support of my partner, who is an excellent visual artist and who wanted to do this month-long journey with someone else. Inktober has taken me out of my comfort zone, but I've had some successes!</p>
+
+    <ul id="image-card-list">
+    { 
+      data.inktober &&
+        data.inktober.map((prompt) => {
+          return (
+            <ImageCard
+              alt={prompt.alt}
+              description={prompt.description}
+              promptData={prompt.promptData}
+              src={prompt.src}
+            />
+          );
+        })
+    }
+    </ul>
+  </main>
+</Layout>
+
+<style>
+  #inktober-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 1rem 2rem;
+  }
+
+  /* Page heading */
+  h1 {
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    font-size: 3rem;
+    font-family: 'Charsey';
+    letter-spacing: 2px;
+    color: white;
+  }
+
+  /* Subheading */
+  #subheading {
+    max-width: 750px;
+    margin-top: unset;
+    margin-bottom: 2rem;
+    font-size: 1.3rem;
+    line-height: 1.7rem;
+    font-family: 'Charsey';
+    color: white;
+  }
+
+  #subheading a {
+    text-decoration-style: dashed;
+    color: #D10000;
+  }
+  #subheading a:visited {
+    color: rgb(191, 1, 243);
+  }
+
+  #image-card-list {
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    grid-template-rows: repeat(auto, 300px);
+    gap: 1rem;
+    padding-left: unset;
+    max-width: 1250px;
+  }
+
+  @media (max-width: 1000px) {
+    #image-card-list {
+      grid-template-columns: repeat(2, 300px);
+      max-width: 960px;
+    }
+  }
+
+  /* Mobile mode */
+  @media (max-width: 769px) {
+    /* Subheading */
+    #subheading {
+      max-width: unset;
+      width: 100%;
+    }
+    #image-card-list {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      max-width: unset;
+      width: 300px;
+    }
+  }
+</style>
