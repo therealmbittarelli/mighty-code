@@ -8,23 +8,11 @@ import data from '../data/index-grid.json';
 
 <Layout title="Maggie Bittarelli | Personal Site">
 	<main>
-<<<<<<< HEAD
     <div class="box main">
       <div id="main-copy">
         <p>Hi! I'm <strong>Maggie Bittarelli</strong>, a full-stack software engineer who builds clean, accessible, performant websites and webapps.</p>
         <p id="me-description">{data.main.description}</p>
       </div>
-=======
-    <div id="main-content">
-      <h1 id="main-heading">Hi! I'm Maggie.</h1>
-
-      <p id="subheading">I've been building engaging web experiences for {qualifier} {howManyYears} years</p>
-
-      <p id="current-status">As of Autumn 2024, I'm overhauling this site, dedicating time to building an ecommerce website for a local artist, becoming proficient in TypeScript, and working on a few other personal projects that I plan to release in the coming months. If you think I'd be a good addition to your team, I'd love to connect! Check out a non-exhaustive list of projects to which I've made significant contributions below.</p>
-      <ProjectWidget client:load projects={data.projects}></ProjectWidget>
-
-
->>>>>>> 1720748e600b6c69812b331f071101642f1f463e
     </div>
     <div class="box about">
       <h2>{data.about.heading}</h2>
@@ -145,7 +133,6 @@ import data from '../data/index-grid.json';
 </Layout>
 
 <style>
-<<<<<<< HEAD
   main {
     display: grid;
     box-sizing: border-box;
@@ -171,10 +158,6 @@ import data from '../data/index-grid.json';
     background: rgb(24, 24, 24);
     color: rgb(215, 213, 213);
     border-radius: .5rem;
-=======
-  /* Main content wrapper */
-  #main-content {
->>>>>>> 1720748e600b6c69812b331f071101642f1f463e
     padding: 1rem;
     font-size: 1.1rem;
     font-family: 'Charsey';
@@ -245,7 +228,6 @@ import data from '../data/index-grid.json';
     display: flex;
     flex-direction: column;
     align-items: center;
-<<<<<<< HEAD
     justify-content: center;
   }
   main .reading p {
@@ -292,46 +274,6 @@ import data from '../data/index-grid.json';
     align-items: center;
   }
   main .now #now-link {
-=======
-	}
-
-  /* All #main-content <p> children */
-  #main-content > p {
-    text-align: center;
-    max-width: 750px;
-  }
-
-  /* H1 */
-  #main-heading {
-    font-size: 7rem;
-    line-height: 3.25rem;
-    font-family: 'OfficeSqueeze';
-    margin-bottom: 2rem;
-    text-align: center;
-  }
-
-  /* Subheading */
-  #subheading {
-    text-align: center;
-    max-width: 730px;
-    margin-top: 3rem;
-    color: #94286F;
-    font-size: 2rem;
-    font-family: 'Charsey';
-    font-weight: 600;
-  }
-
-  /* Current status copy */
-  #current-status {
-    font-size: 1.3rem;
-    font-family: 'Charsey';
-    font-weight: 600;
-  }
-
-  /* "Stellar devs" link */
-  #gs-team {
-    color: #1864FB;
->>>>>>> 1720748e600b6c69812b331f071101642f1f463e
     text-decoration: none;
     color: #ffa500;
     font-size: 2rem;
@@ -341,7 +283,6 @@ import data from '../data/index-grid.json';
     transform: translateX(3%) translateY(-3%);
   }
 
-<<<<<<< HEAD
   /* Inktober box */
   main .inktober {
     grid-area: inktober;
@@ -479,57 +420,6 @@ import data from '../data/index-grid.json';
       background-position: bottom 0 right 6%;
     }
     main .main #main-copy {
-=======
-  /* Brief description */
-  #dev-blurb {
-    font-family: 'Charsey';
-    margin-bottom: 3rem;
-    margin-top: 2rem;
-  }
-
-  /* Mobile mode */
-  @media (max-width: 769px) {
-    /* Main content wrapper */
-    #main-content {
-      margin: 0 1rem;
-    }
-
-    /* H1 */
-    #main-heading {
-      font-size: 5rem;
-      line-height: 4.5rem;
-      margin-bottom: unset;
-    }
-
-    /* Subheading */
-    #subheading {
-      margin-top: 2rem;
-      margin-bottom: 1rem;
-      max-width: 410px;
-    }
-  }
-
-  /* Smaller mobile mode */
-  @media (max-width: 550px) {
-    /* Main content wrapper */
-    #main-content {
-      margin: 0 .5rem;
-    }
-
-    /* H1 */
-    #main-heading {
-      font-size: 3rem;
-      line-height: 3.5rem;
-      margin-top: 1rem;
-    }
-
-    /* Subheading */
-    #subheading {
-      margin-top: 1rem;
-      font-size: 1.5rem;
-      line-height: 2.25rem;
-      margin-bottom: unset;
->>>>>>> 1720748e600b6c69812b331f071101642f1f463e
       width: 100%;
       max-width: unset;
       margin-bottom: 300px;
