@@ -11,7 +11,7 @@
 import SkipLink from '../SkipLink/SkipLink.jsx';
 
 // CSS
-import styles from './Header.module.css';
+// import styles from './Header.module.css';
 
 //------------------------------------------------------------------------------
 // Component
