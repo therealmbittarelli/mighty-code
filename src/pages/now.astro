@@ -1,0 +1,85 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+import data from "../data/now.json";
+
+---
+<Layout title="What I'm Up To | Maggie Bittarelli">
+  <main id="now">
+    <h1>What I'm up to these days</h1>
+    <p id="what-is-now">This is a <a href="https://sive.rs/now">now page</a>, and if you have your own site, you should make one, too!</p>
+    <p id="last-updated">Last updated {data.lastUpdated}</p>
+    {
+      data.updates.length > 0 &&
+      data.updates.map((update) => {
+          let paragraphs = []
+          let updates = [];
+          if (update.paragraphs.length > 0) {
+            update.paragraphs.map((paragraph) => {
+              paragraphs.push(
+                <p class="update-paragraph">{paragraph}</p>
+                <br />
+              )
+            })
+          }
+          updates.push(
+            <h2>{update.heading}</h2>
+            <div>{paragraphs}</div>
+          )
+          return updates;
+        })
+
+    }
+  </main>
+</Layout>
+
+<style>
+  main {
+    min-height: calc(100vh - 200px);
+    color: white;
+    max-width: 700px;
+    width: 100%;
+    margin: 5rem auto 2rem;
+    background: rgb(23, 23, 23);
+    border-radius: .5rem;
+    border: 2px solid rgb(23,23,23);
+    margin-top: 5rem;
+    padding: 1rem;
+    font-family: 'Charsey';
+    font-size: 1.1rem;
+  }
+
+  main#now h1 {
+    text-align: center;
+    font-size: 2.5rem;
+  }
+
+  main#now h2 {
+    color:rgb(121, 192, 255);
+    margin-top: 3rem;
+  }
+
+  main#now #what-is-now {
+    text-decoration: none;
+
+  }
+  main#now #what-is-now a {
+    text-decoration: none;
+    color:rgb(234, 151, 255);
+  }
+  main#now #what-is-now a:visited {
+    color:rgb(212, 66, 249);
+  }
+
+  main#now #last-updated {
+    margin-bottom: 3rem;
+    color: rgb(170, 170, 246);
+    font-style: italic;
+  }
+
+  main#now .update-paragraph {
+    margin-bottom: -1rem;
+
+  }
+
+</style>

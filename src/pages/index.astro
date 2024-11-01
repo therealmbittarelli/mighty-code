@@ -1,125 +1,467 @@
 ---
+// Componients
 import Layout from '../layouts/Layout.astro';
-import LinkCard from '../components/LinkCard.astro';
+
+// Data
+import data from '../data/index-grid.json';
 ---
 
 <Layout title="Maggie Bittarelli | Personal Site">
 	<main>
-    <div id="main-content">
-      <h1 id="main-heading">Hi! I'm Maggie.</h1>
-      <p class="main-info intro">I'm a full-stack developer who builds clean, accessible, performant websites and webapps. </p>
-      <p class="main-info">I create custom solutions in JavaScript and Typescript, frequently leveraging frameworks like React, and recently working with AstroJS.<br/>I'm a wiz with Python, and love the satisfaction of navigating a database via a well-written query.</p>
+    <div class="box main">
+      <div id="main-copy">
+        <p>Hi! I'm <strong>Maggie Bittarelli</strong>, a full-stack software engineer who builds clean, accessible, performant websites and webapps.</p>
+        <p id="me-description">{data.main.description}</p>
+      </div>
     </div>
-    <ul id="card-list">
-      <LinkCard href="/development" title="Portfolio" body="Notable projects I've significantly contributed to" />
-      <LinkCard href="/my-projects" title="Weekly Projects" body="I'm doing a small project each week. Check it out!" />
-      <LinkCard href="/inktober" title="...Unrelated" body="For fun, my Inktober sketches" />
+    <div class="box about">
+      <h2>{data.about.heading}</h2>
+      <p>{data.about.blurb}</p>
+
+      <p>{data.about.professionalDesc}</p>
+
+      <p>{data.about.personalDesc}</p>
+    </div>
+    <div class="box inktober">
+      <a href="/inktober" id="inktober-link">
+        <h2>{data.inktober.heading}</h2>
+        <img src="/uploads/icon-right-arrow.svg" alt="" height="20px" />
+      </a>
+    </div>
+    <div class="box now">
+      <a href="/now" id="now-link">
+        <h2>{data.now.heading}</h2>
+      </a>
+    </div>
+
+    <div class="box time">
+      {data.time.stayTuned}
+      <!-- <WeatherWidget /> -->
+    </div>
+    <div class="box contact">
+      <h2>{data.contact.heading}</h2>
+      <p>{data.contact.freelance}</p>
+      <p>{data.contact.permanentFT}</p>
+      <a href="mailto:maggiekmcclellan@gmail.com" id="email-link" aria-label="Email Maggie">
+        <img src="/uploads/icon-mail.svg" alt="" height="50px" aria-hidden="true" />
+      </a>
+    </div>
+    <div class="box color">{data.color.stayTuned}</div>
+    <div class="box reading">
+      <a href="https://www.goodreads.com/user/show/130722412-maggie-mae" rel="noreferrer noopener" target="_blank" aria-label="Visit Maggie's Goodreads profile">
+        <img src="/uploads/goodreads.svg" alt="" height="100px"/>
+      </a>
+      <p>{data.reading.heading}</p>
+    </div>
+    <div class="box social">
+      <ul id="social-list">
+        <li class="social-link">
+          <a href="https://github.com/therealmbittarelli" rel="noreferrer noopener" target="_blank" aria-label="Visit Maggie's GitHub page">
+            <img
+              src="/uploads/icon-github.svg"
+              alt=""
+              loading="lazy"
+              height="70px"
+            />
+            <span class="visually-hidden">{data.social.gitHub.hidden}</span>
+          </a>
+        </li>
+        <li class="social-link">
+          <a href="https://www.linkedin.com/in/maggie-mcclellan/" rel="noreferrer noopener" target="_blank">
+            <img
+              src="/uploads/icon-linkedin.svg"
+              alt=""
+              loading="lazy"
+              height="60px"
+              aria-label="Visit Maggie's LinkedIn profile"
+            />
+            <span class="visually-hidden">{data.social.linkedIn.hidden}</span>
+          </a>
+        </li>
+        <li class="social-link">
+          <a href="/uploads/mbittarelli_resume.pdf" download="mbittarelli_resume.pdf">
+            <img
+              src="/uploads/icon-resume.svg"
+              alt=""
+              loading="lazy"
+              height="45px"
+              aria-label="Download Maggie's resume"
+            />
+            <span class="visually-hidden">{data.social.resume.hidden}</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="box technologies">
+      <p>{data.technologies.copy}</p>
+    <ul>
+      <li class="technology-link">
+        <img src="/uploads/js-logo.webp" alt="" />
+      </li>
+      <li class="technology-link">
+        <img src="/uploads/ts-logo-blue.webp" alt="" />
+      </li>
+      <li class="technology-link">
+        <img src="/uploads/react-logo.webp" alt="" />
+      </li>
+      <li class="technology-link">
+        <img src="/uploads/astro-logo.webp" alt="" />
+      </li>
+      <li class="technology-link">
+        <img src="/uploads/next-logo.webp" alt="" />
+      </li>
+      <li class="technology-link">
+        <img src="/uploads/node-logo.webp" alt="" />
+      </li>
+      <li class="technology-link">
+        <img src="/uploads/python-logo.webp" alt="" />
+      </li>
+      <li class="technology-link">
+        <img src="/uploads/html-logo.webp" alt="" />
+      </li>
+      <li class="technology-link">
+        <img src="/uploads/css-logo.webp" alt="" />
+      </li>
     </ul>
+    </div>
+    <div class="box footer">
+      <p>
+        {data.footer.copy} <a href="https://astro.build/">Astro</a>. 
+      </p>
+    </div>
   </main>
 </Layout>
 
 <style>
-  h1 {
-    font-family:'Charsey';
-    line-height: 3.25rem;
-  }
-
-  #gs-team {
-    color: #1864FB;
-    text-decoration: none;
-    font-weight: 600;
-  }
-  #gs-team:visited {
-    color: #0453F1;
-  }
-
-  #dev-blurb {
-    font-family: 'Charsey';
-    margin-bottom: 3rem;
-  }
-	main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
-    margin: auto;
-		font-size: 20px;
-		line-height: 1.6;
-	}
-
-  #main-content {
-    width: 800px;
-		max-width: calc(100% - 2rem);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  #main-heading {
-    /* color: #f5f8e5; */
-    font-size: 7rem;
-    font-family: 'OfficeSqueeze';
-    transition: margin-left 1 ease-in-out;
-    margin-bottom: 2rem;
-    text-align: center;
-  }
-
-  .main-info {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    /* color: #f5f8e5; */
-    font-size: 1.2rem;
-    line-height: 1.8rem;
-    max-width: 650px;
-  }
-  .main-info.intro {
-    font-size: 1.6rem;
-    /* color:rgb(164, 4, 182); */
-    color: #94286F;
-    text-align: center;
-  }
-  .main-info.disclaimer {
-    font-size: 1.6rem;
-    text-align: center;
-    color:rgb(255, 111, 0);
-  }
-
-  #card-list {
-    margin-top: 3rem;
+  main {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 1rem;
-    margin-left: unset;
-    padding-left: unset;
-    max-width: 1000px;
-    width: 100%;
+    box-sizing: border-box;
+    padding: 2rem;
+    max-width: 1150px;
+    margin: 0 auto;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas:
+      "main main main about"
+      "contact technologies reading about"
+      "contact technologies now about"
+      "contact time now inktober"
+      "social social color footer";
+    gap: 1rem;
   }
 
-  #dev-icon-link {
+  .visually-hidden {
+    visibility: hidden;
+  }
+
+  main .box {
+    background: rgb(24, 24, 24);
+    color: rgb(215, 213, 213);
+    border-radius: .5rem;
+    padding: 1rem;
+    font-size: 1.1rem;
+    font-family: 'Charsey';
+  }
+
+  /* Main box */
+  main .main {
+    grid-area: main;
+    background-image: url('/uploads/maggievista.jpg');
+    background-position: bottom right;
+    background-size: cover;
+  }
+  main .main #main-copy {
+    max-width: 60%;
+    color: #FFFFFF;
+    background: rgb(100, 100, 100, .9);
+    padding: .5rem;
+    border-radius: .5rem;
+  }
+  main .main strong {
+    font-size: larger;
+    /* color: #00FFFF; */
+    color: #FFD700;
+  }
+
+  /* About box */
+  main .about {
+    grid-area: about;
+  }
+
+  /* Social box */
+  main .social {
+    grid-area: social;
+    display: flex;
+    justify-content: center;
+  }
+  main .social #social-list {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style-type: none;
+    padding-left: unset;
+    gap: 1rem;
+  }
+  main .social .social-link a {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    width: 70px;
+    transition: transform .3s ease-in-out;
+  }
+  main .social .social-link:hover a {
+    filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+    transform: translateX(7%) translateY(-7%);
+  }
+
+  /* Time box */
+  main .time {
+    grid-area: time;
+    display: flex;
     justify-content: center;
+    align-items: center;
+  }
+
+  /* Reading box */
+  main .reading {
+    grid-area: reading;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  main .reading p {
+    text-align: center;
+  }
+  main .reading:hover p {
+    color: #ffa500;
+  }
+
+  /* Technologies box */
+  main .technologies {
+    grid-area: technologies;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  main .technologies ul {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    gap: 1rem;
+    padding-left: unset;
+  }
+  main .technologies ul img {
+    height: 80px;
+    width: 80px;
+    object-fit: cover;
+    border: 1px solid white;
+    /* border-radius: .5rem; */
+    border-radius: 50%;
+    transition: border-radius .25s ease-in-out;
+  }
+  main .technologies ul img:hover {
+    /* border-radius: 50%; */
+    border-radius: .5rem;
+  }
+
+  /* Now box */
+  main .now {
+    grid-area: now;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  main .now #now-link {
+    text-decoration: none;
+    color: #ffa500;
+    font-size: 2rem;
+    transition: transform .3s ease-in-out, text-decoration .3s ease-in;
+  }
+  main .now:hover #now-link {
+    transform: translateX(3%) translateY(-3%);
+  }
+
+  /* Inktober box */
+  main .inktober {
+    grid-area: inktober;
+    display: flex;
+    justify-content: center;
+  }
+  main #inktober-link {
+    text-decoration: none;
+    color: orange;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+  }
+  main #inktober-link:active,
+  main #inktober-link img:active {
+    color: rgb(253, 107, 3);
+  }
+  main #inktober-link img {
+    transition: transform .25s ease-in-out;
+  }
+  main #inktober-link:hover img {
+    transform: translateX(30%);
+  }
+
+  /* Color box */
+  main .color {
+    grid-area: color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Footer box */
+  main .footer {
+    grid-area: footer;
+  }
+  main .footer a {
+    color: orange;
+  }
+
+  /* Contact box */
+  main .contact {
+    grid-area: contact;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  main .contact h2 {
+    align-self: center;
+  }
+  main .contact #email-link {
+    align-self: center;
     margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  main .contact #email-link img {
+    transition: transform .3s ease-in-out;
+  }
+  main .contact #email-link:hover img {
+    filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+    transform: translateX(10%) translateY(-10%);
   }
 
-  .source-code-icon {
-    height: 8.5rem;
-    width: 8.5rem;
+  /* Point at which the grid should lose a column */
+  @media (max-width: 1050px) {
+    main {
+      grid-template-columns: 1fr 1fr 200px;
+      grid-template-rows: repeat(7, auto);
+      grid-template-areas: 
+        "main main main"
+        "about now time"
+        "about now reading"
+        "about social inktober"
+        "about social color"
+        "contact technologies color"
+        "contact footer footer";
+    }
+
+    /* Main box */
+    main .main {
+      display: flex;
+      align-items: center;
+      height: 300px;
+    }
+    main .main #main-copy {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
   }
 
+  /* Mobile mode */
+  @media (max-width: 900px) {
+    /* Technologies box */
+    main .technologies ul {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    main .technologies ul a {
+      justify-self: center;
+      align-self: center;
+    }
+    main .technologies ul img {
+      height: 100px;
+      width: 100px;
+      object-fit: cover;
+      border: 1px solid white;
+    }
+  }
+
+  /* Mobile phone mode */
   @media (max-width: 769px) {
-    #main-content {
-      width: 100%;
-    }
-
-    #main-heading {
-      font-size: 5rem;
-    }
-
-    #card-list {
-      margin-top: 1rem;
+    main {
       display: flex;
       flex-direction: column;
-      gap: 1rem;
+      padding: 2rem;
+    }
+
+    main .box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    main .box p {
+      max-width: 600px;
+      text-align: center;
+    }
+
+    /* Main box */
+    main .main {
+      flex-direction: column;
+      padding: unset;
+      background-image: url('/uploads/maggievista.jpg');
+      height: min-content;
+      background-position: bottom 0 right 6%;
+    }
+    main .main #main-copy {
+      width: 100%;
+      max-width: unset;
+      margin-bottom: 300px;
+      padding: unset;
+      background: rgb(24, 24, 24, .8);
+      border-bottom-left-radius: unset;
+      border-bottom-right-radius: unset;
+      font-weight:  normal;
+    }
+    main .main #main-copy p {
+      padding: 0 1rem;
+    }
+
+    /* Technologies box */
+    main .technologies ul {
+      grid-template-columns: repeat(3, 30%);
+    }
+    main .technologies ul img {
+      height: 80px;
+      width: 80px;
+    }
+  }
+
+  /* Small mobile devices mode */
+  @media (max-width: 420px) {
+    main {
+      padding: 1rem;
+    }
+
+    /* Main box */
+    main .main {
+      height: 700px;
+      flex-direction: column;
+      padding: unset;
+      background-image: url('/uploads/maggievista.jpg');
+      background-position: bottom 0 right 6%;
+    }
+
+    /* Technologies box */
+    main .technologies ul img {
+      height: 70px;
+      width: 70px;
     }
   }
 </style>

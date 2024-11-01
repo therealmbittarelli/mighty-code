@@ -1,0 +1,48 @@
+{
+  "main": {
+    "description": "I create custom solutions in JavaScript and Typescript, frequently leveraging technologies like React, Astro, and/or Next. I'm a wiz with Python, and enjoy tackling backend challenges pertaining to scalability, security, and functionality."
+  },
+  "about": {
+    "heading": "About me",
+    "blurb": "I'm a mom, partner, developer, voracious reader, and year-round grower of things.",
+    "professionalDesc": "Professionally, I thrive on a diverse team of empathetic, creative, skilled devs, but also enjoy freelancing on my own, particularly when working with small local businesses.",
+    "personalDesc": "Away from screens, I wrangle my toddler, play board games with my husband, care for our gardens and land, cook, and read."
+  },
+  "inktober": {
+    "heading": "Inktober 2024"
+  },
+  "now": {
+    "heading": "/now"
+  },
+  "time": {
+    "stayTuned": "Currently building something fun for this space!"
+  },
+  "contact": {
+    "heading": "Talk to me!",
+    "freelance": "I'm currently available for web development projects with small businesses.",
+    "permanentFT": "I'm also open to exploring a remote, full-time role with your team!"
+  },
+  "color": {
+    "stayTuned": "Something interactive coming to this space soon!"
+  },
+  "reading": {
+    "heading": "Check out my reading adventures!"
+  },
+  "social": {
+    "gitHub": {
+      "hidden": "Maggie's GitHub profile"
+    },
+    "linkedIn": {
+      "hidden": "Maggie's LinkedIn profile"
+    },
+    "resume": {
+      "hidden": "Maggie's resume"
+    }
+  },
+  "technologies": {
+    "copy": "A few languages and technologies I love..."
+  },
+  "footer": {
+    "copy": "© 2024 · The online home of Maggie Bittarelli, made possible by "
+  }
+}

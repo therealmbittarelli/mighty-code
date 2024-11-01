@@ -1,35 +1,5 @@
 ---
-import Header from '../components/Header/Header.jsx';
-import Footer from '../components/Footer/Footer.astro';
-
 const { title } = Astro.props;
-
-let linkData = [
-  {
-    linkHref: '/about',
-    imageSrc: '/uploads/test-img.png',
-    copy: 'About',
-    isActive: false,
-    showOnMobile: true,
-    showOnDesktop: true
-  },
-  {
-    linkHref: '/development',
-    imageSrc: '/uploads/test-img.png',
-    copy: 'Development',
-    isActive: false,
-    showOnMobile: false,
-    showOnDesktop: true
-  },
-  {
-    linkHref: '/development',
-    imageSrc: '/uploads/test-img.png',
-    copy: 'Dev',
-    isActive: false,
-    showOnMobile: true,
-    showOnDesktop: false
-  }
-];
 ---
 
 <!doctype html>
@@ -43,9 +13,7 @@ let linkData = [
 		<title>{title}</title>
 	</head>
 	<body>
-		<Header client:load links={linkData} />
 		<slot />
-    <Footer />
 	</body>
 </html>
 <style is:global>
@@ -59,14 +27,15 @@ let linkData = [
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-	}
+    background: rgb(4, 4, 4);
+    /* background: repeating-linear-gradient( -45deg, #000 0px, #000 10px, #030303 3px, #040404 3px, #000 200px); */
+    background-color: #000000;
+    background-image: repeating-radial-gradient( circle at 0 0, transparent 0, #000000 340px ), repeating-linear-gradient( #05050555, #090909 );
+
+}
 
   .mobile-only {
     display: none;
-  }
-
-  footer {
-    justify-self: flex-end;
   }
 
   /* Mobile mode */
