@@ -1,5 +1,5 @@
 ---
-// Componients
+// Components
 import Layout from '../layouts/Layout.astro';
 
 // Data
@@ -8,12 +8,14 @@ import data from '../data/index-grid.json';
 
 <Layout title="Maggie Bittarelli | Personal Site">
 	<main>
+
     <div class="box main">
       <div id="main-copy">
         <p>Hi! I'm <strong>Maggie Bittarelli</strong>, a full-stack software engineer who builds clean, accessible, performant websites and webapps.</p>
         <p id="me-description">{data.main.description}</p>
       </div>
     </div>
+
     <div class="box about">
       <h2>{data.about.heading}</h2>
       <p>{data.about.blurb}</p>
@@ -22,12 +24,14 @@ import data from '../data/index-grid.json';
 
       <p>{data.about.personalDesc}</p>
     </div>
+
     <div class="box inktober">
       <a href="/inktober" id="inktober-link">
         <h2>{data.inktober.heading}</h2>
         <img src="/uploads/icon-right-arrow.svg" alt="" height="20px" />
       </a>
     </div>
+
     <div class="box now">
       <a href="/now" id="now-link">
         <h2>{data.now.heading}</h2>
@@ -38,6 +42,7 @@ import data from '../data/index-grid.json';
       {data.time.stayTuned}
       <!-- <WeatherWidget /> -->
     </div>
+
     <div class="box contact">
       <h2>{data.contact.heading}</h2>
       <p>{data.contact.freelance}</p>
@@ -46,13 +51,16 @@ import data from '../data/index-grid.json';
         <img src="/uploads/icon-mail.svg" alt="" height="50px" aria-hidden="true" />
       </a>
     </div>
+
     <div class="box color">{data.color.stayTuned}</div>
+
     <div class="box reading">
       <a href="https://www.goodreads.com/user/show/130722412-maggie-mae" rel="noreferrer noopener" target="_blank" aria-label="Visit Maggie's Goodreads profile">
         <img src="/uploads/goodreads.svg" alt="" height="100px"/>
       </a>
       <p>{data.reading.heading}</p>
     </div>
+
     <div class="box social">
       <ul id="social-list">
         <li class="social-link">
@@ -92,43 +100,46 @@ import data from '../data/index-grid.json';
         </li>
       </ul>
     </div>
+
     <div class="box technologies">
       <p>{data.technologies.copy}</p>
-    <ul>
-      <li class="technology-link">
-        <img src="/uploads/js-logo.webp" alt="" />
-      </li>
-      <li class="technology-link">
-        <img src="/uploads/ts-logo-blue.webp" alt="" />
-      </li>
-      <li class="technology-link">
-        <img src="/uploads/react-logo.webp" alt="" />
-      </li>
-      <li class="technology-link">
-        <img src="/uploads/astro-logo.webp" alt="" />
-      </li>
-      <li class="technology-link">
-        <img src="/uploads/next-logo.webp" alt="" />
-      </li>
-      <li class="technology-link">
-        <img src="/uploads/node-logo.webp" alt="" />
-      </li>
-      <li class="technology-link">
-        <img src="/uploads/python-logo.webp" alt="" />
-      </li>
-      <li class="technology-link">
-        <img src="/uploads/html-logo.webp" alt="" />
-      </li>
-      <li class="technology-link">
-        <img src="/uploads/css-logo.webp" alt="" />
-      </li>
-    </ul>
+      <ul>
+        <li class="technology-link">
+          <img src="/uploads/js-logo.webp" alt="" />
+        </li>
+        <li class="technology-link">
+          <img src="/uploads/ts-logo-blue.webp" alt="" />
+        </li>
+        <li class="technology-link">
+          <img src="/uploads/react-logo.webp" alt="" />
+        </li>
+        <li class="technology-link">
+          <img src="/uploads/astro-logo.webp" alt="" />
+        </li>
+        <li class="technology-link">
+          <img src="/uploads/next-logo.webp" alt="" />
+        </li>
+        <li class="technology-link">
+          <img src="/uploads/node-logo.webp" alt="" />
+        </li>
+        <li class="technology-link">
+          <img src="/uploads/python-logo.webp" alt="" />
+        </li>
+        <li class="technology-link">
+          <img src="/uploads/html-logo.webp" alt="" />
+        </li>
+        <li class="technology-link">
+          <img src="/uploads/css-logo.webp" alt="" />
+        </li>
+      </ul>
     </div>
+
     <div class="box footer">
       <p>
         {data.footer.copy} <a href="https://astro.build/">Astro</a>. 
       </p>
     </div>
+
   </main>
 </Layout>
 
