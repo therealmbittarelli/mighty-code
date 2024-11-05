@@ -1,0 +1,114 @@
+{
+  "heading": "Projects",
+  "description": "Lorem ipsum",
+  "projects": [
+    {
+      "imageSrc": "/uploads/mighty-mags.webp",
+      "projectName": "Superior Cleaning Services",
+      "description": "",
+      "tags": []
+    },
+    {
+      "imageSrc": "/uploads/mighty-mags.webp",
+      "imageAlt": "A collage of screenshots taken from the Skin360 webapp.",
+      "projectName": "Neutrogena Skin360",
+      "description": "Skin360 is a web app that uses facial scans and survey data to recommend personalized skincare routines. Over four years, I developed custom components and implemented complex logic across the app, navigating multiple redesigns and ensuring functionality across varied app flows. I built and integrated REST APIs, managed data pipelines, and maintained microservices. In 2024, our team migrated the app to Next.js, refactoring legacy code from Web Components with a focus on scalability and future-proofing.",
+      "tags": [
+        "NextJS",
+        "JavaScript",
+        "NodeJS",
+        "Python",
+        "MySQL",
+        "Jest",
+        "pytest",
+        "Netlify",
+        "REST APIs",
+        "Custom Microservices"
+      ],
+      "link": {
+        "href": "https://skin360.neutrogena.com/",
+        "copy": "Live web app"
+      }
+    },
+    {
+      "imageSrc": "/uploads/mighty-mags.webp",
+      "projectName": "MIT AgeLab",
+      "imageAlt": "A collage of screenshots taken from the MIT AgeLab site.",
+      "description": "For MIT AgeLab's web-presence refresh, I helped build a modern, responsive site designed to enhance visitor engagement and ease of navigation. I particularly enjoyed developing Netlify functions to consume several API routes and creating versatile 'card link' components found throughout the site. The clean design with colorful accents made this project especially rewarding as I saw it come to life.",
+      "tags": ["Eleventy", "REST APIs", "Netlify"],
+      "link": {
+        "href": "https://agelab.mit.edu/",
+        "copy": "Live site"
+      }
+    },
+    {
+      "imageSrc": "/uploads/mighty-mags.webp",
+      "imageAlt": "A collage of screenshots taken from the Concern USA site.",
+      "projectName": "Concern Worldwide US",
+      "description": "Concern is a global non-profit focused on ending extreme poverty. I helped build v1 of their content-rich website, crafting custom components and scaffolding pages. To give Concern flexibility in creating new pages and posting content independently, we developed around 80 modular components with versatile styling options, allowing them to be easily integrated into the site using Decap CMS for seamless updates.",
+      "tags": [
+        "AstroJS",
+        "Preact",
+        "Nanostores",
+        "Decap CMS",
+        "Storybook",
+        "Jest",
+        "Algolia",
+        "Netlify"
+      ],
+      "link": {
+        "href": "https://www.concernusa.org/",
+        "copy": "Live site"
+      }
+    },
+    {
+      "imageSrc": "/uploads/mighty-mags.webp",
+      "imageAlt": "A collage of screenshots taken from Concern USA's Carbon Calculator webapp.",
+      "projectName": "Carbon Calculator - Concern Worldwide",
+      "description": "This web app surveys users to calculate their carbon footprint based on lifestyle and daily activities. I focused on developing custom components for the survey and throughout the app to enhance usability and functionality.",
+      "tags": ["!framework", "Web Components", "Shoelace", "Netlify"],
+      "link": {
+        "href": "https://climate.concernusa.org/",
+        "copy": "Live web app"
+      }
+    },
+    {
+      "imageSrc": "/uploads/mighty-mags.webp",
+      "imageAlt": "A collage of screenshots taken from the Grafton Studio site.",
+      "projectName": "Grafton Studio",
+      "description": "During my time at Grafton Studio, I contributed to two versions of the company’s website. The initial iteration prioritized lean performance with a lightweight architecture using mostly HTML and CSS. For the current live version, launched in early 2024, I was one of two primary dev contributors and built a large portion of the site's components and pages. Additionally, I wrote much of the case study copy, highlighting project outcomes with clear, impactful messaging.",
+      "tags": ["React", "AstroJS", "Sanity CMS", "Copywriting"],
+      "link": {
+        "href": "https://beyondbarriers.concernusa.org/",
+        "copy": "Live site"
+      }
+    },
+    {
+      "imageSrc": "/uploads/mighty-mags.webp",
+      "projectName": "Beyond Barriers",
+      "description": "This site showcases findings and resources from Concern Worldwide's Beyond Barriers project, which examines the challenges local actors face in humanitarian response. As part of a two-developer team, I especially enjoyed building the Library and world map modal functionalities, enhancing accessibility to key resources.",
+      "tags": ["React", "AstroJS", "Decap CMS", "Netlify"],
+      "link": {
+        "href": "https://beyondbarriers.concernusa.org/",
+        "copy": "Live site"
+      }
+    },
+    {
+      "imageSrc": "/uploads/mighty-mags.webp",
+      "projectName": "NNPHL",
+      "description": "The National NGO Program on Humanitarian Leadership's site offers vital resources to equip humanitarians with the skills and competencies needed to address global challenges and crises. Working alongside another developer, I helped create this beautifully clean, responsive site, tackling particular challenges related to layered elements and scaling, and ensuring a pixel-perfect result. Additionally, I explored options for an LMS platform to host NNPHL's online course as a bit of a side quest.",
+      "tags": ["React", "AstroJS", "Decap CMS", "Netlify", "Research"]
+    },
+    {
+      "imageSrc": "/uploads/mighty-mags.webp",
+      "imageAlt": "A collage of screenshots taken from the myGiide webapp.",
+      "projectName": "myGiide",
+      "description": "Built to complement a book by a professor at Northeastern University, this web app helps users assess their cross-cultural competence. My primary contributions to v1 included backend work, such as building API routes and interacting with the database, as well as frontend work, developing the surveys, components, and pages that form the app’s UI.",
+      "tags": ["Python", "Flask", "MongoDB", "pytest", "REST APIs"],
+      "link": {
+        "href": "https://www.mygiide.com/",
+        "copy": "Live web app"
+      }
+    }
+  ]
+}
