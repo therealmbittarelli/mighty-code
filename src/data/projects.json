@@ -3,16 +3,16 @@
   "description": "Lorem ipsum",
   "projects": [
     {
-      "imageSrc": "/uploads/mighty-mags.webp",
+      "imageSrc": "/uploads/scc-image.webp",
       "projectName": "Superior Cleaning Services",
-      "description": "",
-      "tags": []
+      "description": "As of Autumn 2024, I’m building this site as the first dedicated web presence for a local business beyond their Facebook page. I worked closely with the owner to develop a simple, lightweight design that looks great on both mobile and desktop, ensuring an accessible, professional look that suits their brand and services.",
+      "tags": ["React", "Astro"]
     },
     {
       "imageSrc": "/uploads/mighty-mags.webp",
       "imageAlt": "A collage of screenshots taken from the Skin360 webapp.",
       "projectName": "Neutrogena Skin360",
-      "description": "Skin360 is a web app that uses facial scans and survey data to recommend personalized skincare routines. Over four years, I developed custom components and implemented complex logic across the app, navigating multiple redesigns and ensuring functionality across varied app flows. I built and integrated REST APIs, managed data pipelines, and maintained microservices. In 2024, our team migrated the app to Next.js, refactoring legacy code from Web Components with a focus on scalability and future-proofing.",
+      "description": "Skin360 is a web app that uses facial scans and survey data to recommend personalized skincare routines. Over the course of four years as part of the Grafton Studio team, I developed custom components and implemented complex logic across the app, navigating multiple redesigns and ensuring functionality across varied app flows. I built and integrated REST APIs, managed data pipelines, and maintained microservices. In 2024, our team migrated the app to Next.js, refactoring legacy code from Web Components with a focus on scalability and future-proofing.",
       "tags": [
         "NextJS",
         "JavaScript",
@@ -34,7 +34,7 @@
       "imageSrc": "/uploads/mighty-mags.webp",
       "projectName": "MIT AgeLab",
       "imageAlt": "A collage of screenshots taken from the MIT AgeLab site.",
-      "description": "For MIT AgeLab's web-presence refresh, I helped build a modern, responsive site designed to enhance visitor engagement and ease of navigation. I particularly enjoyed developing Netlify functions to consume several API routes and creating versatile 'card link' components found throughout the site. The clean design with colorful accents made this project especially rewarding as I saw it come to life.",
+      "description": "For MIT AgeLab's web-presence refresh, I helped build a modern, responsive site designed to enhance visitor engagement and ease of navigation as part of the Grafton Studio team. I particularly enjoyed developing Netlify functions to consume several API routes and creating versatile 'card link' components found throughout the site. The clean design with colorful accents made this project especially rewarding as I saw it come to life.",
       "tags": ["Eleventy", "REST APIs", "Netlify"],
       "link": {
         "href": "https://agelab.mit.edu/",
@@ -45,7 +45,7 @@
       "imageSrc": "/uploads/mighty-mags.webp",
       "imageAlt": "A collage of screenshots taken from the Concern USA site.",
       "projectName": "Concern Worldwide US",
-      "description": "Concern is a global non-profit focused on ending extreme poverty. I helped build v1 of their content-rich website, crafting custom components and scaffolding pages. To give Concern flexibility in creating new pages and posting content independently, we developed around 80 modular components with versatile styling options, allowing them to be easily integrated into the site using Decap CMS for seamless updates.",
+      "description": "Concern is a global non-profit focused on ending extreme poverty. As part of the Grafton Studio team, I contributed significantly to v1 of their content-rich website, crafting custom components and scaffolding pages. To give Concern flexibility in creating new pages and posting content independently, we developed around 80 modular components with versatile styling options, allowing them to be easily integrated into the site using Decap CMS for seamless updates.",
       "tags": [
         "AstroJS",
         "Preact",
@@ -65,7 +65,7 @@
       "imageSrc": "/uploads/mighty-mags.webp",
       "imageAlt": "A collage of screenshots taken from Concern USA's Carbon Calculator webapp.",
       "projectName": "Carbon Calculator - Concern Worldwide",
-      "description": "This web app surveys users to calculate their carbon footprint based on lifestyle and daily activities. I focused on developing custom components for the survey and throughout the app to enhance usability and functionality.",
+      "description": "This web app surveys users to calculate their carbon footprint based on lifestyle and daily activities. I focused on developing custom components for the survey and throughout the app to enhance usability and functionality as part of the Grafton Studio team of devs who worked on this project.",
       "tags": ["!framework", "Web Components", "Shoelace", "Netlify"],
       "link": {
         "href": "https://climate.concernusa.org/",
@@ -86,7 +86,7 @@
     {
       "imageSrc": "/uploads/mighty-mags.webp",
       "projectName": "Beyond Barriers",
-      "description": "This site showcases findings and resources from Concern Worldwide's Beyond Barriers project, which examines the challenges local actors face in humanitarian response. As part of a two-developer team, I especially enjoyed building the Library and world map modal functionalities, enhancing accessibility to key resources.",
+      "description": "This site showcases findings and resources from Concern Worldwide's Beyond Barriers project, which examines the challenges local actors face in humanitarian response. As part of a two-developer team during my time with Grafton Studio, I especially enjoyed building the Library and world map modal functionalities, enhancing accessibility to key resources.",
       "tags": ["React", "AstroJS", "Decap CMS", "Netlify"],
       "link": {
         "href": "https://beyondbarriers.concernusa.org/",
@@ -96,14 +96,14 @@
     {
       "imageSrc": "/uploads/mighty-mags.webp",
       "projectName": "NNPHL",
-      "description": "The National NGO Program on Humanitarian Leadership's site offers vital resources to equip humanitarians with the skills and competencies needed to address global challenges and crises. Working alongside another developer, I helped create this beautifully clean, responsive site, tackling particular challenges related to layered elements and scaling, and ensuring a pixel-perfect result. Additionally, I explored options for an LMS platform to host NNPHL's online course as a bit of a side quest.",
+      "description": "The National NGO Program on Humanitarian Leadership's site offers vital resources to equip humanitarians with the skills and competencies needed to address global challenges and crises. Working alongside another developer during my time with Grafton Studio, I helped create this beautifully clean, responsive site, tackling particular challenges related to layered elements and scaling, and ensuring a pixel-perfect result. Additionally, I explored options for an LMS platform to host NNPHL's online course as a bit of a side quest.",
       "tags": ["React", "AstroJS", "Decap CMS", "Netlify", "Research"]
     },
     {
       "imageSrc": "/uploads/mighty-mags.webp",
       "imageAlt": "A collage of screenshots taken from the myGiide webapp.",
       "projectName": "myGiide",
-      "description": "Built to complement a book by a professor at Northeastern University, this web app helps users assess their cross-cultural competence. My primary contributions to v1 included backend work, such as building API routes and interacting with the database, as well as frontend work, developing the surveys, components, and pages that form the app’s UI.",
+      "description": "Built to complement a book by a professor at Northeastern University, this web app helps users assess their cross-cultural competence. As part of the Grafton Studio team who brought this application to life, my primary contributions to v1 included backend work, such as building API routes and interacting with the database, as well as frontend work, developing the surveys, components, and pages that form the app’s UI.",
       "tags": ["Python", "Flask", "MongoDB", "pytest", "REST APIs"],
       "link": {
         "href": "https://www.mygiide.com/",
