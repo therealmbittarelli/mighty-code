@@ -14,16 +14,70 @@
   "now": {
     "heading": "/now"
   },
-  "time": {
-    "stayTuned": "Currently building something fun for this space!"
+  "portfolio": {
+    "stayTuned": "Currently building something fun for this space!",
+    "heading": "View my portfolio",
+    "href": "/projects"
   },
   "contact": {
     "heading": "Talk to me!",
     "freelance": "I'm currently available for web development projects with small businesses.",
     "permanentFT": "I'm also open to exploring a remote, full-time role with your team!"
   },
-  "color": {
-    "stayTuned": "Something interactive coming to this space soon!"
+  "trivia": {
+    "stayTuned": "Something interactive coming to this space soon!",
+    "questions": [
+      {
+        "question": "I'm studying Italian to gain citizenship through marriage",
+        "options": ["True", "False"],
+        "answer": "True! My husband is applying through family ties, but as his spouse, I need to show intermediate proficiency in the language to qualify."
+      },
+      {
+        "question": "Our toddler sings which song daily:",
+        "options": ["You Are My Sunshine", "Jingle Bells"],
+        "answer": "Jingle Bells! He started singing around 12 months of age, and this was the first recognizable long-form song he latched onto."
+      },
+      {
+        "question": "In a past job, I was:",
+        "options": ["A mascot", "A chef"],
+        "answer": "A mascot! Yup. A big kangaroo named K.O., mascot of the Brockton Rox (unaffiliated professional baseball team)."
+      },
+      {
+        "question": "You might not guess that I have solid ____ skills.",
+        "options": ["Trumpet", "Minecraft"],
+        "answer": "Trumpet! Prior to having our son, I played in a number of actively-gigging street bands around Greater Boston."
+      },
+      {
+        "question": "My all-time favorite TV show is:",
+        "options": ["Buffy the Vampire Slayer", "The Office"],
+        "answer": "Real respect to Buffy, but The Office is my #1. It's incredible how funny and how quotable this show is. Dwight is one of my favorite fictional characters."
+      },
+      {
+        "question": "The first concert I saw live was headlined by:",
+        "options": ["Third Eye Blind", "Backstreet Boys"],
+        "answer": "Third Eye Blind in Portland, ME! Openers were Our Lady Peace and Eve 6. I remember writing in my journal about how 3eb's lead singer had used 'the F word' a lot."
+      },
+      {
+        "question": "",
+        "options": ["", ""],
+        "answer": ""
+      },
+      {
+        "question": "",
+        "options": ["", ""],
+        "answer": ""
+      },
+      {
+        "question": "",
+        "options": ["", ""],
+        "answer": ""
+      },
+      {
+        "question": "",
+        "options": ["", ""],
+        "answer": ""
+      }
+    ]
   },
   "reading": {
     "heading": "Check out my reading adventures!"
