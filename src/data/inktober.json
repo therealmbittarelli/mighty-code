@@ -1,7 +1,7 @@
 {
   "inktober": [
     {
-      "alt": "test",
+      "alt": "A sketch of a person wearing a ghost as a backpack.",
       "description": "On day 1, the sketchbook I made was still drying, so I did my sketch elsewhere and pasted it in. My son is into 'spooky ghosts' right now, so this backpack got ghostified.",
       "promptData": {
         "prompt": "Backpack",
@@ -10,7 +10,7 @@
       "src":"/uploads/inktober-1.webp"
     },
     {
-      "alt": "test",
+      "alt": "A sketch of an arm picking up a rock and discovering a smoke-breathing snake underneath.",
       "description": "Woops! Made a mistake, scribbled it out and turned it into a little snake puffing smoke and .. magic? Discovered hiding under a rock.",
       "promptData": {
         "prompt": "Discover",
@@ -18,7 +18,7 @@
       },
       "src":"/uploads/inktober-2.webp"
     },  {
-      "alt": "test",
+      "alt": "A sketch of a cat wearing human-sized winter boots.",
       "description": "",
       "promptData": {
         "prompt": "Boots",
@@ -27,14 +27,14 @@
       "src":"/uploads/inktober-3.webp"
     },  {
       "alt": "test",
-      "description": "",
+      "description": "A sketch of a thatch-roofed hut on stilts in the water.",
       "promptData": {
         "prompt": "Exotic",
         "number":"4"
       },
       "src":"/uploads/inktober-4.webp"
     },  {
-      "alt": "test",
+      "alt": "A sketch of a view through binoculars; on one side, a bird looks through at high magnification, and on the other side, a mountain view.",
       "description": "No comment...",
       "promptData": {
         "prompt": "Binoculars",
@@ -42,7 +42,7 @@
       },
       "src":"/uploads/inktober-5.webp"
     },  {
-      "alt": "test",
+      "alt": "A sketch of the Fellowship's silhouette against a mountain backdrop. (References Lord of the Rings)",
       "description": "Things started looking better (...sometimes) once I started choosing subject matter I was interested in.",
       "promptData": {
         "prompt": "Trek",
@@ -50,7 +50,7 @@
       },
       "src":"/uploads/inktober-6.webp"
     },  {
-      "alt": "test",
+      "alt": "A sketch of passports for Rivendell and Gondor.",
       "description": "I'm reading The Lord of the Rings this month, so I've got LotR on the brain.",
       "promptData": {
         "prompt": "Passport",
@@ -58,7 +58,7 @@
       },
       "src":"/uploads/inktober-7.webp"
     },  {
-      "alt": "test",
+      "alt": "A sketch of a path through the woods.",
       "description": "This is what happens when I try to draw from my imagination (a few previous sketches suffer from this same approach).",
       "promptData": {
         "prompt": "Hike",
@@ -66,7 +66,7 @@
       },
       "src":"/uploads/inktober-8.webp"
     },  {
-      "alt": "test",
+      "alt": "A sketch of a sunflower.",
       "description": "",
       "promptData": {
         "prompt": "Sun",
