@@ -1,6 +1,8 @@
 ---
 // Components
 import Layout from '../layouts/Layout.astro';
+import TriviaWidget from '../components/TriviaWidget/TriviaWidget.jsx';
+
 
 // Data
 import data from '../data/index-grid.json';
@@ -16,6 +18,13 @@ import data from '../data/index-grid.json';
       </div>
     </div>
 
+    <div class="box portfolio">
+      <a href={data.portfolio.href} id="portfolio-link">
+        <h2>{data.portfolio.heading}</h2>
+        <img src="/uploads/icon-right-arrow.svg" alt="" height="20px" />
+      </a>
+    </div>
+
     <div class="box about">
       <h2>{data.about.heading}</h2>
       <p>{data.about.blurb}</p>
@@ -25,22 +34,10 @@ import data from '../data/index-grid.json';
       <p>{data.about.personalDesc}</p>
     </div>
 
-    <div class="box inktober">
-      <a href="/inktober" id="inktober-link">
-        <h2>{data.inktober.heading}</h2>
-        <img src="/uploads/icon-right-arrow.svg" alt="" height="20px" />
-      </a>
-    </div>
-
     <div class="box now">
       <a href="/now" id="now-link">
         <h2>{data.now.heading}</h2>
       </a>
-    </div>
-
-    <div class="box time">
-      {data.time.stayTuned}
-      <!-- <WeatherWidget /> -->
     </div>
 
     <div class="box contact">
@@ -52,7 +49,16 @@ import data from '../data/index-grid.json';
       </a>
     </div>
 
-    <div class="box color">{data.color.stayTuned}</div>
+    <div class="box trivia">
+      <TriviaWidget data={data.trivia} />
+    </div>
+
+    <div class="box inktober">
+      <a href="/inktober" id="inktober-link">
+        <h2>{data.inktober.heading}</h2>
+        <img src="/uploads/icon-right-arrow.svg" alt="" height="20px" />
+      </a>
+    </div>
 
     <div class="box reading">
       <a href="https://www.goodreads.com/user/show/130722412-maggie-mae" rel="noreferrer noopener" target="_blank" aria-label="Visit Maggie's Goodreads profile">
@@ -156,8 +162,8 @@ import data from '../data/index-grid.json';
       "main main main about"
       "contact technologies reading about"
       "contact technologies now about"
-      "contact time now inktober"
-      "social social color footer";
+      "contact social trivia inktober"
+      "portfolio portfolio trivia footer";
     gap: 1rem;
   }
 
@@ -226,11 +232,15 @@ import data from '../data/index-grid.json';
   }
 
   /* Time box */
-  main .time {
-    grid-area: time;
+  main .trivia {
+    grid-area: trivia;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all .8s ease-in-out;
   }
 
   /* Reading box */
@@ -268,12 +278,10 @@ import data from '../data/index-grid.json';
     width: 80px;
     object-fit: cover;
     border: 1px solid white;
-    /* border-radius: .5rem; */
     border-radius: 50%;
     transition: border-radius .25s ease-in-out;
   }
   main .technologies ul img:hover {
-    /* border-radius: 50%; */
     border-radius: .5rem;
   }
 
@@ -318,12 +326,28 @@ import data from '../data/index-grid.json';
     transform: translateX(30%);
   }
 
-  /* Color box */
-  main .color {
-    grid-area: color;
+  /* Portfolio box */
+  main .portfolio {
+    grid-area: portfolio;
     display: flex;
     justify-content: center;
+  }
+  main #portfolio-link {
+    text-decoration: none;
+    color: orange;
+    display: flex;
     align-items: center;
+    gap: .5rem;
+  }
+  main #portfolio-link:active,
+  main #portfolio-link img:active {
+    color: rgb(253, 107, 3);
+  }
+  main #portfolio-link img {
+    transition: transform .25s ease-in-out;
+  }
+  main #portfolio-link:hover img {
+    transform: translateX(30%);
   }
 
   /* Footer box */
@@ -366,11 +390,11 @@ import data from '../data/index-grid.json';
       grid-template-rows: repeat(7, auto);
       grid-template-areas: 
         "main main main"
-        "about now time"
+        "about now portfolio"
         "about now reading"
         "about social inktober"
-        "about social color"
-        "contact technologies color"
+        "about social trivia"
+        "contact technologies trivia"
         "contact footer footer";
     }
 
@@ -444,14 +468,37 @@ import data from '../data/index-grid.json';
       padding: 0 1rem;
     }
 
+    /* Now link */
+    main .now #now-link {
+      font-size: unset;
+    }
+
+    /* Social links */
+    main .social .social-link a {
+      filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+    }
+
     /* Technologies box */
     main .technologies ul {
       grid-template-columns: repeat(3, 30%);
     }
+    main .technologies ul li {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
     main .technologies ul img {
       height: 80px;
       width: 80px;
+      border-radius: .5rem;
     }
+
+    /* Trivia box */
+    main .trivia {
+      display: none;
+    }
+
   }
 
   /* Small mobile devices mode */
