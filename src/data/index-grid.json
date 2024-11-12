@@ -28,9 +28,9 @@
     "stayTuned": "Something interactive coming to this space soon!",
     "questions": [
       {
-        "question": "I'm studying Italian to gain citizenship through marriage",
+        "question": "I take Italian lessons.",
         "options": ["True", "False"],
-        "answer": "True! My husband is applying through family ties, but as his spouse, I need to show intermediate proficiency in the language to qualify."
+        "answer": "True! My husband is applying for Italian citizenship through family ties, but as his spouse, I need to show intermediate proficiency in the language to qualify."
       },
       {
         "question": "Our toddler sings which song daily:",
