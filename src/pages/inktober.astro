@@ -11,7 +11,7 @@ import data from '../data/inktober.json';
   <main id="inktober-page">
     <h1>Inktober 2024</h1>
 
-    <p id="subheading">As you'll quickly discover below, I'm not particularly gifted at drawing! I committed to doing <a href="https://www.inktober.com" rel="noreferrer noopener" target="_blank">Inktober</a> in support of my partner, who is an excellent visual artist and who wanted to do this month-long journey with someone else. Inktober took me out of my comfort zone, but I had a few "successes"!</p>
+    <p id="subheading">I committed to doing <a href="https://www.inktober.com" rel="noreferrer noopener" target="_blank">Inktober</a> in support of my partner, who is an excellent visual artist and who wanted to do this month-long journey with someone else.<br /><br />It took a lot of energy each day to come up with inspiration, and then to try to execute on it while being a totally unpracticed sketch artist; I'm not sure that I'd volunteer to do it again next year, but I admittedly really enjoyed the results of my efforts for a handful of the prompts.</p>
 
     <ul id="image-card-list">
     { 
@@ -36,13 +36,14 @@ import data from '../data/inktober.json';
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 1rem 2rem;
+    padding: 2rem 1rem;
+    margin: 0 auto;
   }
 
   /* Page heading */
   h1 {
     text-align: center;
-    margin-top: 3rem;
+    margin-top: 2rem;
     margin-bottom: 1.5rem;
     font-size: 3rem;
     font-family: 'Charsey';
@@ -55,12 +56,13 @@ import data from '../data/inktober.json';
     max-width: 750px;
     margin-top: unset;
     margin-bottom: 2rem;
-    font-size: 1.3rem;
-    line-height: 1.7rem;
+    font-size: 1.4rem;
+    line-height: 1.9rem;
     font-family: 'Charsey';
     color: white;
   }
 
+  /* Subheading link */
   #subheading a {
     text-decoration-style: dashed;
     color: #D10000;
@@ -69,6 +71,7 @@ import data from '../data/inktober.json';
     color: rgb(191, 1, 243);
   }
 
+  /* List of image cards */
   #image-card-list {
     display: grid;
     grid-template-columns: repeat(3, 300px);
@@ -78,7 +81,9 @@ import data from '../data/inktober.json';
     max-width: 1250px;
   }
 
+  /* Point at which the image card list layout should change */
   @media (max-width: 1000px) {
+    /* List of image cards */
     #image-card-list {
       grid-template-columns: repeat(2, 300px);
       max-width: 960px;
@@ -92,6 +97,8 @@ import data from '../data/inktober.json';
       max-width: unset;
       width: 100%;
     }
+
+    /* List of image cards */
     #image-card-list {
       display: flex;
       flex-direction: column;
