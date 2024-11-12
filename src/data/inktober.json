@@ -19,15 +19,15 @@
       "src":"/uploads/inktober-2.webp"
     },  {
       "alt": "A sketch of a cat wearing human-sized winter boots.",
-      "description": "",
+      "description": "After I drew this, I was bothered by the fact that the prompt was plural and I had only made space to draw one boot, so I added a tiny little boot in the bottom corner.",
       "promptData": {
         "prompt": "Boots",
         "number":"3"
       },
       "src":"/uploads/inktober-3.webp"
     },  {
-      "alt": "test",
-      "description": "A sketch of a thatch-roofed hut on stilts in the water.",
+      "alt": "A sketch of a thatch-roofed hut on stilts in the water.",
+      "description": "Looks like a nice place to escape to for a week..",
       "promptData": {
         "prompt": "Exotic",
         "number":"4"
@@ -51,7 +51,7 @@
       "src":"/uploads/inktober-6.webp"
     },  {
       "alt": "A sketch of passports for Rivendell and Gondor.",
-      "description": "I'm reading The Lord of the Rings this month, so I've got LotR on the brain.",
+      "description": "I was reading The Lord of the Rings in October, so I had LotR on the brain.",
       "promptData": {
         "prompt": "Passport",
         "number":"7"
@@ -67,7 +67,7 @@
       "src":"/uploads/inktober-8.webp"
     },  {
       "alt": "A sketch of a sunflower.",
-      "description": "",
+      "description": "The finished product here made me smile. I'm no good with drawing, but once in a while these happy accidents appear.",
       "promptData": {
         "prompt": "Sun",
         "number":"9"
@@ -163,7 +163,7 @@
       "src":"/uploads/inktober-20.webp"
     },  {
       "alt": "A sketch of Brett and Jemaine from Flight of the Conchords, rapping.",
-      "description": "Couldn't think of anything inspired for 'Rhinocerous', so went with 'Rhymenocerous'.",
+      "description": "Couldn't think of anything inspired for 'Rhinocerous', so went with 'Rhymenocerous' (Flight of the Conchords).",
       "promptData": {
         "prompt": "Rhinoceros",
         "number":"21"
