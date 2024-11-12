@@ -1,0 +1,73 @@
+/* Styles for /src/components/Header/Header.jsx */
+
+#header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background: rgb(0, 0, 0);
+}
+
+#header > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1400px;
+  width: 100%;
+  padding: 1rem;
+}
+
+/* Logo link */
+#header .logo-link {
+  height: 70px;
+  width: auto;
+  border-radius: .5rem;
+  padding: 1rem;
+}
+
+/* Logo image */
+#header .logo {
+  height: 70px;
+  width: auto;
+  border-radius: .5rem;
+  margin-right: .5rem;
+}
+
+/* <nav> */
+#header .nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+/* List of nav links */
+#header .nav-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 24px;
+  padding-right: 16px;
+  list-style: none;
+}
+
+/* Nav link <a> */
+#header .nav-link {
+  text-decoration: none;
+}
+
+/* Nav link copy */
+#header .link-copy {
+  color: #f5f8e5;
+  font-size: 1.2rem;
+  font-family: 'Charsey';
+}
+
+/* Mobile mode */
+@media (max-width: 769px) {
+  /* Logo link */
+  #header .logo-link {
+    margin: 0 auto;
+  }
+}

@@ -11,7 +11,7 @@
 import SkipLink from '../SkipLink/SkipLink.jsx';
 
 // CSS
-import styles from './Header.module.css';
+import './Header.css';
 
 //------------------------------------------------------------------------------
 // Component
@@ -20,14 +20,9 @@ import styles from './Header.module.css';
  * @component Header
  * @description The site's header component.
  *
- * @param {array} links - Object containing data for the top-level "Overview" link, as well as an array of second-level nav items. Required.
+ * @param {array} links - Object containing data for the top-level "Overview" link, as well as an array of second-level nav items. Optional.
  */
-const Header = ({ links }) => {
-
-  // If no nav link data is available, don't render this component
-  if (links.length < 1) {
-    return;
-  }
+const Header = ({ links = [] }) => {
 
   /**
    * Generates a linked logo.
@@ -35,8 +30,16 @@ const Header = ({ links }) => {
    */
   const generateLogo = () => {
     return (
-      <a className={styles.logoLink} href="/" aria-label="Maggie Bittarelli's Personal Site">
-        <img src="/uploads/mighty-mags.webp" alt="Mighty Code" className={styles.logo}/>
+      <a
+        className="logo-link"
+        href="/"
+        aria-label="Maggie Bittarelli's Personal Site"
+      >
+        <img
+          src="/uploads/mighty-mags.webp"
+          alt="Mighty Code"
+          className="logo"
+        />
       </a>
     );
   }
@@ -65,14 +68,14 @@ const Header = ({ links }) => {
       jsx.push(
         <li
           key={link.copy.toLowerCase().replaceAll(' ', '-')}
-          className={[styles.navLinkItem, dynamicClass].join(' ')}>
+          className={dynamicClass}>
           <a
             key={link.copy.toLowerCase().replaceAll(' ', '-')}
             href={link.linkHref} 
-            className={styles.navLink}
+            className="nav-link"
             aria-label={link.copy}
           >
-            <p className={styles.linkCopy}>{link.copy}</p>
+            <p className="link-copy">{link.copy}</p>
           </a>
         </li>
       );
@@ -90,11 +93,14 @@ const Header = ({ links }) => {
         {generateLogo()}
 
         {/* Nav Links */}
-        <nav className={styles.nav}>
-          <ul className={styles.navLinks}>
-            {generateNavLinks()}
-          </ul>
-        </nav>
+        {
+          links.length > 0 &&
+            <nav className="nav">
+              <ul className="nav-links">
+                {generateNavLinks()}
+              </ul>
+            </nav>
+        }
       </div>
     </header>
   )
