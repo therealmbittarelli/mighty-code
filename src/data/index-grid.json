@@ -5,7 +5,7 @@
   "about": {
     "heading": "About me",
     "blurb": "I'm a mom, partner, developer, voracious reader, and year-round grower of things.",
-    "professionalDesc": "Professionally, I thrive on a diverse team of empathetic, creative, skilled devs, but also enjoy freelancing on my own, particularly when working with small local businesses.",
+    "professionalDesc": "Professionally, I thrive on a diverse team of empathetic, creative, skilled devs, but also enjoy freelancing on my own, particularly when working with local businesses.",
     "personalDesc": "Away from screens, I wrangle my toddler, play board games with my husband, care for our gardens and land, cook, and read."
   },
   "inktober": {
@@ -58,24 +58,14 @@
         "answer": "Third Eye Blind in Portland, ME! Openers were Our Lady Peace and Eve 6. I remember writing in my journal about how 3eb's lead singer had used 'the F word' a lot."
       },
       {
-        "question": "",
-        "options": ["", ""],
-        "answer": ""
+        "question": "My favorite place to visit is:",
+        "options": ["Sweden", "New Zealand"],
+        "answer": "New Zealand! The sun, the snow, the mountains, the shore, the grassy hills, the crystal-clear rivers... there's no place like it."
       },
       {
-        "question": "",
-        "options": ["", ""],
-        "answer": ""
-      },
-      {
-        "question": "",
-        "options": ["", ""],
-        "answer": ""
-      },
-      {
-        "question": "",
-        "options": ["", ""],
-        "answer": ""
+        "question": "I don't like this popular food:",
+        "options": ["Cheese", "Chocolate"],
+        "answer": "Cheese! With almost no exceptions. *Will eat mozz on pizza if it's a reasonable amount of mozz. No 'extra cheese', please."
       }
     ]
   },
