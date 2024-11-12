@@ -1,4 +1,7 @@
 ---
+// Components
+import Header from '../components/Header/Header.jsx';
+
 const { title } = Astro.props;
 ---
 
@@ -13,6 +16,7 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
+    <Header />
 		<slot />
 	</body>
 </html>
@@ -28,10 +32,8 @@ const { title } = Astro.props;
     flex-direction: column;
     min-height: 100vh;
     background: rgb(4, 4, 4);
-    /* background: repeating-linear-gradient( -45deg, #000 0px, #000 10px, #030303 3px, #040404 3px, #000 200px); */
     background-color: #000000;
     background-image: repeating-radial-gradient( circle at 0 0, transparent 0, #000000 340px ), repeating-linear-gradient( #05050555, #090909 );
-
 }
 
   /* Mobile-only */
