@@ -24,6 +24,7 @@
   backface-visibility: hidden;
   transform-style: preserve-3d;
   color: rgb(215, 213, 213);
+  text-align: center;
 }
 #back {
   z-index: 1;
