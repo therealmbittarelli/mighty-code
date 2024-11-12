@@ -7,7 +7,9 @@ import data from "../data/now.json";
 <Layout title="What I'm Up To | Maggie Bittarelli">
   <main id="now">
     <h1>What I'm up to these days</h1>
-    <p id="what-is-now">This is a <a href="https://sive.rs/now">now page</a>, and if you have your own site, you should make one, too!</p>
+    <p id="what-is-now">
+      This is a <a href="https://sive.rs/now">now page</a>, and if you have your own site, you should make one, too!
+    </p>
     <p id="last-updated">Last updated {data.lastUpdated}</p>
     {
       data.updates.length > 0 &&
@@ -43,25 +45,27 @@ import data from "../data/now.json";
     background: rgb(23, 23, 23);
     border-radius: .5rem;
     border: 2px solid rgb(23,23,23);
-    margin-top: 5rem;
+    margin-top: 3rem;
     padding: 1rem;
     font-family: 'Charsey';
     font-size: 1.1rem;
   }
 
+  /* Page heading */
   main#now h1 {
     text-align: center;
     font-size: 2.5rem;
   }
 
+  /* Section headings */
   main#now h2 {
     color:rgb(121, 192, 255);
     margin-top: 3rem;
   }
 
+  /* "What is now?" */
   main#now #what-is-now {
     text-decoration: none;
-
   }
   main#now #what-is-now a {
     text-decoration: none;
@@ -71,12 +75,14 @@ import data from "../data/now.json";
     color:rgb(212, 66, 249);
   }
 
+  /* "Last updated" */
   main#now #last-updated {
     margin-bottom: 3rem;
     color: rgb(170, 170, 246);
     font-style: italic;
   }
 
+  /* Paragraphs */
   main#now .update-paragraph {
     margin-bottom: -1rem;
 
