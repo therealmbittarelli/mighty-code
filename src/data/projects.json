@@ -79,7 +79,7 @@
       "description": "During my time at Grafton Studio, I contributed to two versions of the company’s website. The initial iteration prioritized lean performance with a lightweight architecture using mostly HTML and CSS. For the current live version, launched in early 2024, I was one of two primary dev contributors and built a large portion of the site's components and pages. Additionally, I wrote much of the case study copy, highlighting project outcomes with clear, impactful messaging.",
       "tags": ["React", "AstroJS", "Sanity CMS", "Copywriting"],
       "link": {
-        "href": "https://beyondbarriers.concernusa.org/",
+        "href": "https://www.graftonstudio.com",
         "copy": "Live site"
       }
     },
