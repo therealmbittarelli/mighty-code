@@ -1,12 +1,12 @@
 {
   "heading": "Projects",
-  "description": "Lorem ipsum",
+  "description": "Check out a sample of projects I've built or made significant contributions to. (Images coming 11/20/24)",
   "projects": [
     {
       "imageSrc": "/uploads/scc-image.webp",
       "projectName": "Superior Cleaning Services",
       "description": "As of Autumn 2024, I’m building this site as the first dedicated web presence for a local business beyond their Facebook page. I worked closely with the owner to develop a simple, lightweight design that looks great on both mobile and desktop, ensuring an accessible, professional look that suits their brand and services.",
-      "tags": ["React", "Astro"]
+      "tags": ["React", "Astro", "Project Management", "Design"]
     },
     {
       "imageSrc": "/uploads/mighty-mags.webp",
