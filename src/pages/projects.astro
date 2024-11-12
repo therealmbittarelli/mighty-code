@@ -7,6 +7,8 @@ import data from '../data/projects.json';
 ---
 <Layout title="Projects | Maggie Bittarelli">
   <main id="projects">
+    <h1>{data.heading}</h1>
+    <p>{data.description}</p>
     <ul id="project-list">
       {
         data.projects.length > 0 &&
@@ -19,7 +21,8 @@ import data from '../data/projects.json';
             }
             return (
               <li class="project">
-                <img src={project.imageSrc} alt="" />
+                {/* <img src={project.imageSrc} alt="" class="project-image" /> */}
+                <div class="project-image"></div>
                 <div class="project-copy">
                   <h2>{project.projectName}</h2>
                   {
@@ -53,39 +56,66 @@ import data from '../data/projects.json';
   main#projects {
     padding: 2rem;
     max-width: 1150px;
-    margin: 2rem auto;
+    margin: 0 auto;
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     color: rgb(215,213,213);
     font-family: 'Charsey';
   }
 
+  /* Page heading */
+  main#projects h1 {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    font-size: 3rem;
+    font-family: 'Charsey';
+    letter-spacing: 2px;
+    color: white;
+  }
+
+  /* Subheading */
+  main#projects > p {
+    width: 100%;
+    text-align: center;
+    max-width: 750px;
+    margin-top: unset;
+    margin-bottom: 2rem;
+    font-size: 1.3rem;
+    line-height: 1.7rem;
+    font-family: 'Charsey';
+    color: white;
+  }
+
   /* List of projects */
   main#projects #project-list {
-    width: 100%;
-    max-width: 1000px;
     gap: 2rem;
     display: flex;
     flex-direction: column;
+    padding: unset;
   }
 
   /* Individual projects */
   main#projects #project-list .project {
     display: grid;
-    grid-template-columns: 400px 1fr;
+    grid-template-columns: 40% 1fr;
     gap: 2rem;
     border-radius: .5rem;
     background-color: #181818;
   }
 
   /* Project image */
-  main#projects #project-list .project img {
-    width: 400px;
+  main#projects #project-list .project .project-image {
+    max-width: 400px;
+    width: 100%;
     height: 100%;
     object-fit: cover;
     border-top-left-radius: .5rem;
     border-bottom-left-radius: .5rem;
+    background-color: rgb(79, 92, 122);
   }
 
   /* Project copy wrapper */
@@ -129,6 +159,7 @@ import data from '../data/projects.json';
     list-style-type: none;
     gap: 1rem;
     flex-wrap: wrap;
+    padding-left: unset;
   }
 
   /* Individual project tag */
@@ -140,5 +171,32 @@ import data from '../data/projects.json';
   }
   main#projects #project-list .project-tag:hover {
     transform: translate(3%, 3%);
+  }
+
+  /* Mobile mode */
+  @media (max-width: 769px) {
+    main#projects #project-list .project {
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Project image */
+    main#projects #project-list .project .project-image {
+      width: 100%;
+      max-width: unset;
+      height: 200px;
+      border-top-right-radius: .5rem;
+      border-bottom-left-radius: unset;
+    }
+
+    /* Project copy container */
+    main#projects #project-list .project .project-copy {
+      margin: 1rem;
+    }
+
+    /* Project paragraph copy */
+    main#projects #project-list .project .project-copy > p {
+      font-size: 1.5rem;
+    }
   }
   </style>
