@@ -55,10 +55,15 @@ const TriviaWidget = ({ data }) => {
    */
   const generateTriviaItem = () => {
     // Choose a random index number
-    let index = Math.floor(Math.random() * 10);
+    let index = Math.floor(Math.random() * 8);
 
     // Grab the trivia item corresponding to the random index number
     let triviaItem = data.questions[index];
+
+    // Don't render if there's no trivia data available
+    if (!triviaItem) {
+      return;
+    }
 
     // Return the back and front of the trivia card
     return (
