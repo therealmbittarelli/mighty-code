@@ -1,17 +1,32 @@
 /**
  * Mighty Code
  *
- * @module /src/components/Header/Header.jsx
+ * @module /src/components/Header/Header.tsx
  */
 
 //------------------------------------------------------------------------------
 // Imports
 //------------------------------------------------------------------------------
 // Components
-import SkipLink from '../SkipLink/SkipLink.jsx';
+import SkipLink from '../SkipLink/SkipLink.tsx';
 
 // CSS
 import './Header.css';
+
+
+//------------------------------------------------------------------------------
+// Interfaces
+//------------------------------------------------------------------------------
+interface Link {
+  copy: string;
+  linkHref: string;
+  showOnMobile?: boolean;
+  showOnDesktop?: boolean;
+}
+
+interface HeaderProps {
+  links?: Link[];
+}
 
 //------------------------------------------------------------------------------
 // Component
@@ -19,16 +34,14 @@ import './Header.css';
 /**
  * @component Header
  * @description The site's header component.
- *
- * @param {array} links - Object containing data for the top-level "Overview" link, as well as an array of second-level nav items. Optional.
  */
-const Header = ({ links = [] }) => {
+const Header: React.FC<HeaderProps> = ({ links = [] }) => {
 
   /**
    * Generates a linked logo.
-   * @returns {jsx} Logo link jsx.
+   * @returns {JSX.Element} Logo link jsx.
    */
-  const generateLogo = () => {
+  const generateLogo = (): JSX.Element => {
     return (
       <a
         className="logo-link"
@@ -46,21 +59,26 @@ const Header = ({ links = [] }) => {
 
   /**
    * Generates a list of nav links.
-   * @returns {jsx} JSX for header nav links.
+   * @returns {JSX.Element[]} JSX for header nav links.
    */
-  const generateNavLinks = () => {
+  const generateNavLinks = (): JSX.Element[] | undefined => {
+    // Don't render nav links if no links data is available
+    if (links.length === 0) {
+      return;
+    }
+
     // Initialize an array to hold nav link jsx
-    let jsx = [];
+    let jsx: Array<JSX.Element> = [];
 
     // Build a list item nav link for each menu option
     for (let link of links) {
 
       // Add desktop/mobile-only class, as appropriate
-      let dynamicClass;
-      if (!link.showOnMobile) {
+      let dynamicClass: string = '';
+      if (!link?.showOnMobile) {
         dynamicClass = 'desktop-only';
       }
-      if (!link.showOnDesktop) {
+      if (!link?.showOnDesktop) {
         dynamicClass = 'mobile-only';
       }
 
@@ -70,7 +88,6 @@ const Header = ({ links = [] }) => {
           key={link.copy.toLowerCase().replaceAll(' ', '-')}
           className={dynamicClass}>
           <a
-            key={link.copy.toLowerCase().replaceAll(' ', '-')}
             href={link.linkHref} 
             className="nav-link"
             aria-label={link.copy}
