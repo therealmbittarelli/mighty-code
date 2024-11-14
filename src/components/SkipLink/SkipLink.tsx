@@ -1,7 +1,7 @@
 /**
  * Mighty Code.
  *
- * @module /src/components/Header/SkipLink/SkipLink.jsx
+ * @module /src/components/Header/SkipLink/SkipLink.tsx
  */
 
 //------------------------------------------------------------------------------
@@ -23,7 +23,7 @@ import './SkipLink.css';
 const SkipLink = () => {
 
   // Reference to this component
-  const ref = useRef();
+  const ref = useRef<HTMLAnchorElement | null>(null);
 
   /**
    * Side effect:
@@ -44,23 +44,25 @@ const SkipLink = () => {
 
   /**
    * Triggered when the "Skip to main content" link loses focus.
-   * @returns {null} Hides the link after a short delay.
    */
-  const delayHideLink = () => {
+  const delayHideLink = ():void => {
     // Link should remain visible for a short time after losing focus
     setTimeout(() => {
-      // Reset top to trigger CSS transition
-      ref.current.style.top = "-48px";
-    }, 2000)
+        if (ref.current && ref.current.style) {
+          // Reset top to trigger CSS transition
+          ref.current.style.top = "-48px";
+        }
+      }, 2000);
   }
 
   /**
    * Triggered on focus of "Skip to main content" link.
-   * @returns {null} Shows the link.
    */
-  const showLink = () => {
+  const showLink: () => void = () => {
     // Set link top to 0 to trigger CSS transition
-    ref.current.style.top = 0;
+    if (ref.current && ref.current.style) {
+      ref.current.style.top = "0";
+    }
   }
 
 
