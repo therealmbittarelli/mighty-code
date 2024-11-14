@@ -13,7 +13,7 @@ import data from '../data/projects.json';
       {
         data.projects.length > 0 &&
           data.projects.map((project) => {
-            let tags = [];
+            let tags: string[] = [];
             if (project.tags.length > 0) {
               for (let tag of project.tags) {
                 tags.push(<li class="project-tag">{tag}</li>);

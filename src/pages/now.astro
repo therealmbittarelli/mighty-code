@@ -14,8 +14,8 @@ import data from "../data/now.json";
     {
       data.updates.length > 0 &&
       data.updates.map((update) => {
-          let paragraphs = []
-          let updates = [];
+          let paragraphs: string[] = []
+          let updates: string[] = [];
           if (update.paragraphs.length > 0) {
             update.paragraphs.map((paragraph) => {
               paragraphs.push(
