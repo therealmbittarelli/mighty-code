@@ -1,0 +1,16 @@
+{
+    "extends": "astro/tsconfigs/strict",
+    "compilerOptions": {
+        "strictNullChecks": true,
+        "allowJs": true,
+        "allowImportingTsExtensions": true,
+        "baseUrl": "./src",
+        "paths": {
+            "@components/*": ["components/*"],
+            "@assets/*": ["assets/*"],
+            "@style/*": ["Style/*"],
+            "@content/*": ["content/*"],
+            "@img/*": ["/public/assets/*"]
+        }
+    }
+}
